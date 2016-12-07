@@ -1,0 +1,127 @@
+/*body{
+	background-image: url(../img/上海.jpg);
+	background-repeat: no-repeat;
+	background-size: 10rem 100%;
+	width:10rem;
+	height:100%;
+}*/
+.clearfix:after{
+	content:"";
+	display: block;
+	clear:both;
+}
+.bgp{
+	width:10rem;
+	height:100%;
+	z-index:-4;
+	float:left;
+	position: fixed;
+	top:0;
+	left:0;
+}
+.mask{
+	width:10rem;
+	height:100%;
+	background-color: rgba(0,0,0,0.2);
+	z-index:-3;
+	float:left; 
+	position: fixed;
+	top:0;
+	left:0;
+}
+header{
+	width:10rem;
+	height:1.173333rem;
+	margin:0rem auto 1rem;
+	padding:0.4rem 0 0 0;
+}
+header>a{
+	background: url(../img/add.png) no-repeat;
+	background-size: 0.64rem 0.64rem ;
+	width:0.64rem;
+	height:0.64rem;
+	display: inline-block;
+	margin-left: 0.266667rem;
+	float:left;
+}
+header ul{
+	width:1.2rem;
+	height:0.64rem;
+	margin:0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+header ul>li{
+	width:0.2rem;
+	height:0.2rem;
+	margin-top:0.22rem;
+	border-radius: 50%;
+	opacity: 0.4;
+	background: #fff;
+}
+header ul>li.active{
+	opacity: 1;
+}
+.current-weather{
+	width:10rem;
+	height:6rem;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	color:#f2f2f2;
+}
+.city{
+	font-size: 28px;
+}
+.weather{
+	font-size: 24px;
+	margin-top: 0.266667rem;
+}
+.temp{
+	font-size:60px;
+	margin-top: 0.533333rem;
+	color:#fff;
+}
+.future-weather{
+	width:10rem;
+	color:#f2f2f2;
+}
+.future-weather li{
+	width:10rem;
+	height:1.86rem;
+	color:#f2f2f2;
+	margin:0.6rem 0;
+}
+.future-weather li>img{
+	float:left;
+	width:1rem;
+	height:1rem;
+	margin: 0.3rem 0.2rem 0 0.7rem;
+}
+.future-weather li>div{
+	float:left;
+	width:4rem;
+	height:1.46rem;
+	margin:0.2rem;
+}
+.day{
+	font-size: 24px;
+}
+.wea {
+	height:0.6rem;
+	color:#e5e5e5;
+	font-size: 22px;
+	margin: 0.2rem 0.2rem  0.2rem 0;
+}
+.wea span,.wea strong{
+	float:left;
+}
+.wea strong{
+	margin-left: 0.4rem;
+}
+.future-weather li>p{
+	line-height: 1.84rem;
+	font-size: 24px;
+	width:3.4rem;
+	float:right;
+}
