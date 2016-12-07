@@ -14,6 +14,7 @@
         document.body.appendChild(script1);
         document.body.appendChild(script2);
     }
+
     function showWeather(data){
         if(data.result.length){
             n++;
@@ -39,12 +40,11 @@
             }
         }
     }
-
+    console.log(weatherData)
 
 var d=[];
 d.push(weatherData.location.name);
 getData();
-renderWeather();
 function renderWeather() {
     $(".city").html(weatherData.location.name);
     $(".weather").html(weatherData.now.text);
@@ -61,7 +61,6 @@ function renderWeather() {
         $(".lh strong").eq(index).html(weatherData.daily[index].high);
     });
 }
-    //
 
 
 
