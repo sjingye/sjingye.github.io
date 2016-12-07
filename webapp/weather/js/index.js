@@ -224,8 +224,13 @@ function searchCity(data) {
 cityList.tap(function (e) {
     if (e.target.nodeName=== 'LI') {
         currentCity = e.target.getAttribute('data-name');
-        // cityList.style.display = 'none';
         getData();
+        d.push(currentCity);
+        renderCity(d);
+        changeStyle(d);
+        $DIVS.hide();
+        $indexSec.show();
+        // cityList.style.display = 'none';
     }
 })
 //数据请求未完成
