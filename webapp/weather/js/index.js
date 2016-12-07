@@ -45,6 +45,7 @@ var d=[];
 d.push(weatherData.location.name);
 getData();
 function renderWeather() {
+    console.dir(weatherData)
     $(".city").html(weatherData.location.name);
     $(".weather").html(weatherData.now.text);
     $(".temp").html(weatherData.now.temperature+"°");
