@@ -16,13 +16,13 @@
     }
 
     function showWeather(data){
-        if(data.result.length){
+        if(data.results.length){
             n++;
-            if(data.result[0].location){
-                weatherData.location = data.result[0].location;
+            if(data.results[0].location){
+                weatherData.location = data.results[0].location;
             }
-            if(data.result[0].now){
-                weatherData.now = data.result[0].now;
+            if(data.results[0].now){
+                weatherData.now = data.results[0].now;
             }
             if(n===2){
                 renderWeather();
@@ -31,16 +31,15 @@
         }
     }
     function showDaily(data){
-        if(data.result.length&&data.result[0].daily){
+        if(data.results.length&&data.results[0].daily){
             n++;
-            weatherData.daily = data.result[0].daily;
+            weatherData.daily = data.results[0].daily;
             if(n===2){
                 renderWeather();
                 n=0;
             }
         }
     }
-    console.log(weatherData)
 
 var d=[];
 d.push(weatherData.location.name);
