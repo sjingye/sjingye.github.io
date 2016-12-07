@@ -11,7 +11,6 @@ $("section>ul").tap(function (e) {
     if (e.target.nodeName=== 'LI') {
         currentCity = e.target.innerHTML;
         inputHead.val(e.target.innerHTML);
-        console.log(currentCity);
         getData();
     }
 })
@@ -20,7 +19,6 @@ var cityList =  $(".cityList");
 inputHead.tap(function () {
     $("section").hide();
     $(".remind").show();
-    console.log(1)
 })
 inputHead.on("change",function () {
     var t = null;

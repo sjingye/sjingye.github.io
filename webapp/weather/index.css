@@ -1,15 +1,3 @@
-/*body{
-	background-image: url(../img/上海.jpg);
-	background-repeat: no-repeat;
-	background-size: 10rem 100%;
-	width:10rem;
-	height:100%;
-}*/
-.clearfix:after{
-	content:"";
-	display: block;
-	clear:both;
-}
 .bgp{
 	width:10rem;
 	height:100%;

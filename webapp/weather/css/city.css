@@ -61,11 +61,11 @@ img {
   display: block;
   clear: both; }
 
-header {
+.city-sec header {
   width: 10rem;
   height: 1.173333rem;
   background-color: #2e2b3c; }
-  header h2 {
+  .city-sec header h2 {
     text-align: center;
     font-weight: normal;
     width: 4rem;
@@ -74,50 +74,45 @@ header {
     position: absolute;
     left: 50%;
     margin-left: -2rem; }
-    [data-dpr="1"] header h2 {
+    [data-dpr="1"] .city-sec header h2 {
       font-size: 18px; }
-    [data-dpr="2"] header h2 {
+    [data-dpr="2"] .city-sec header h2 {
       font-size: 36px; }
-    [data-dpr="3"] header h2 {
+    [data-dpr="3"] .city-sec header h2 {
       font-size: 54px; }
-
-a {
+.city-sec a {
   display: inline-block;
   width: 0.64rem;
   height: 0.64rem; }
-
-.back {
+.city-sec .back {
   float: left;
   margin: 0.2rem  0 0 0.2rem; }
-
-.add {
+.city-sec .add {
   float: right;
   margin: 0.2rem 0.3rem 0 0; }
-
-img {
+.city-sec img {
   width: 0.64rem;
   height: 0.64rem; }
-
-li {
+.city-sec li {
   height: 1.6rem;
   width: 8rem;
   padding: 0 1rem;
   line-height: 1.6rem;
   border-bottom: 1px solid #f2f2f2; }
-  [data-dpr="1"] li {
+  [data-dpr="1"] .city-sec li {
     font-size: 13px; }
-  [data-dpr="2"] li {
+  [data-dpr="2"] .city-sec li {
     font-size: 26px; }
-  [data-dpr="3"] li {
+  [data-dpr="3"] .city-sec li {
     font-size: 39px; }
-  li span {
+  .city-sec li span {
     color: #999;
     float: right; }
-    [data-dpr="1"] li span {
+    [data-dpr="1"] .city-sec li span {
       font-size: 11px; }
-    [data-dpr="2"] li span {
+    [data-dpr="2"] .city-sec li span {
       font-size: 22px; }
-    [data-dpr="3"] li span {
+    [data-dpr="3"] .city-sec li span {
       font-size: 33px; }
 
 /*# sourceMappingURL=city.css.map */

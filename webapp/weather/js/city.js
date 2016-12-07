@@ -6,3 +6,4 @@ function renderCity(d) {
     $("ul").html(str);
 }
 renderCity(d);
+//根据选择了的城市渲染
