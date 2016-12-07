@@ -61,6 +61,7 @@ function renderWeather() {
         $(".lh strong").eq(index).html(weatherData.daily[index].high);
     });
 }
+    //
 
 
 
