@@ -96,6 +96,7 @@ $(".search-sec header>a").tap(function () {
        };
     var currentCity="上海";
     var n=0;
+    var d = [];
     function getData() {
         var script1 = document.createElement("script");
         script1.src = 'https://api.thinkpage.cn/v3/weather/now.json?ts=1480426837&ttl=3600000&uid=UDA821CDB4&sig=WsJ%2FO4reAerB%2FHmulk0z09sQ6tE%3D&callback=showWeather&location='+currentCity;
@@ -115,6 +116,7 @@ $(".search-sec header>a").tap(function () {
             }
             if(n===2){
                 renderWeather();
+                d.push(weatherData.location.name);
                 n=0;
             }
         }
@@ -129,8 +131,6 @@ $(".search-sec header>a").tap(function () {
             }
         }
     }
-var d = [];
-d.push(weatherData.location.name);
 getData();
  // renderWeather();
 function renderWeather() {
@@ -182,7 +182,6 @@ $(".search-sec section>ul").tap(function (e) {
             getData();
             $DIVS.hide();
             $indexSec.show();
-            console.log(currentCity);
         }
     }
 });
