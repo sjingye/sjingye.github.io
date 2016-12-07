@@ -10,7 +10,7 @@
         var script1 = document.createElement("script");
         script1.src = 'https://api.thinkpage.cn/v3/weather/now.json?ts=1480426837&ttl=3600000&uid=UDA821CDB4&sig=WsJ%2FO4reAerB%2FHmulk0z09sQ6tE%3D&callback=showWeather&location='+currentCity;
         var script2 = document.createElement("script");
-        script2.src = 'https://api.thinkpage.cn/v3/weather/now.json?ts=1480426837&ttl=3600000&uid=UDA821CDB4&sig=WsJ%2FO4reAerB%2FHmulk0z09sQ6tE%3D&callback=showDaily&location='+currentCity+'&start=0&days=3';
+        script2.src = 'https://api.thinkpage.cn/v3/weather/daily.json?ts=1480426837&ttl=3600000&uid=UDA821CDB4&sig=WsJ%2FO4reAerB%2FHmulk0z09sQ6tE%3D&callback=showDaily&location='+currentCity+'&start=0&days=3';
         document.body.appendChild(script1);
         document.body.appendChild(script2);
     }
@@ -45,7 +45,6 @@ var d=[];
 d.push(weatherData.location.name);
 getData();
 function renderWeather() {
-    console.dir(weatherData)
     $(".city").html(weatherData.location.name);
     $(".weather").html(weatherData.now.text);
     $(".temp").html(weatherData.now.temperature+"°");
