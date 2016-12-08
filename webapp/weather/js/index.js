@@ -182,7 +182,8 @@ $(".search-sec section>ul").tap(function (e) {
         }
         else{
             currentCity = e.target.innerHTML;
-            d.push(currentCity);
+            d.unshif(currentCity);
+            $(".city-choosed-list li em").eq(0).html(d[0]);
             init();
             $DIVS.hide();
             $indexSec.show();
@@ -202,7 +203,7 @@ inputHead.on("input",function () {
         clearTimeout(t);
         t = setTimeout(function () {
             var script = document.createElement("script");
-            script.src = 'https://api.thinkpage.cn/v3/location/search.json?ts=1480426837&ttl=3600000&uid=UDA821CDB4&sig=WsJ%2FO4reAerB%2FHmulk0z09sQ6tE%3D&callback=searchCity&q='+inputHead.val();
+            script.src = 'https://api.thinkpage.cn/v3/location/search.json?ts=1480426837&ttl=3600000&uid=UDA821CDB4&sig=WsJ%2FO4reAerB%2FHmulk0z09sQ6tE%3D&callback=searchCity&q='+$(this).val();
             document.body.appendChild(script);
         },500);
     }
@@ -218,11 +219,12 @@ function searchCity(data) {
         var citys = data.results;
         var str = '';
         citys.forEach(function(city, index) {
-            str += "<li data-name=city.name>"+city.path+"</li>";
+            str += "<li data-name="+city.name+">"+city.path+"</li>";
         });
         cityList.html(str);
         cityList.tap(function (e) {
             if (e.target.nodeName=== 'LI'&& $(this).html().indexOf(d) ===-1) {
+                console.log(e.target.getAttribute('data-name'));
                 currentCity = e.target.getAttribute('data-name');
                 d.push(currentCity);
                 getData();
