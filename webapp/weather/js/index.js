@@ -154,8 +154,8 @@ function renderWeather() {
 
 //根据选中的城市渲染city
  function renderCity(d) {
-     var str = "<li><em>"+d[0]+"</em><span>当前位置</span></li>";
-     for(var i=1;i<d.length;i++){
+     var str = "<li><em>"+d[d.length-1]+"</em><span>当前位置</span></li>";
+     for(var i=0;i<d.length-1;i++){
          str += "<li><em>"+d[i]+"</em></li>";
      }
      $(".city-choosed-list").html(str);
@@ -177,6 +177,9 @@ function init() {
     renderCity(d);
     changeStyle(d);
 }
+
+var listEm = $(".city-choosed-list li em");
+var cityChoosedList = $(".city-choosed-list");
 $(".search-sec section>ul").tap(function (e) {
     if (e.target.nodeName=== 'LI') {
         if($.inArray(e.target.innerHTML, d) !== -1){
@@ -185,17 +188,20 @@ $(".search-sec section>ul").tap(function (e) {
         else{
             currentCity = e.target.innerHTML;
             d.push(currentCity);
-            var listEm = $(".city-choosed-list li em");
             listEm.eq(0).html(d[d.length-1]);
             for(var i=1;i<listEm.length;i++){
                 listEm.eq(i).html(d[i-1]);
             }
             init();
-            $DIVS.hide();
-            $indexSec.show();
         }
     }
 });
+cityChoosedList.tap(function (e) {
+    if(e.target.nodeName ==="LI"){
+        currentCity = $(e.target).html();
+        init();
+    }
+})
 var inputHead = $(".search-sec form input");
 var cityList =  $(".search-sec .cityList");
 inputHead.tap(function () {
