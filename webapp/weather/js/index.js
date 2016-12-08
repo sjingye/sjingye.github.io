@@ -94,9 +94,9 @@ $(".search-sec header>a").tap(function () {
                }
            ]
        };
-    var currentCity="上海";
+    var currentCity="北京";
     var n=0;
-    var d = [];
+    var d = [currentCity];
     function getData() {
         var script1 = document.createElement("script");
         script1.src = 'https://api.thinkpage.cn/v3/weather/now.json?ts=1480426837&ttl=3600000&uid=UDA821CDB4&sig=WsJ%2FO4reAerB%2FHmulk0z09sQ6tE%3D&callback=showWeather&location='+currentCity;
@@ -116,7 +116,9 @@ $(".search-sec header>a").tap(function () {
             }
             if(n===2){
                 renderWeather();
-                d.push(weatherData.location.name);
+                /*if( weatherData.location.name.indexOf(d)===-1 ){
+                    d.push(weatherData.location.name);
+                }*/
                 n=0;
             }
         }
@@ -131,8 +133,8 @@ $(".search-sec header>a").tap(function () {
             }
         }
     }
-getData();
- // renderWeather();
+// getData();
+//  renderWeather();
 function renderWeather() {
     $(".city").html(weatherData.location.name);
     $(".weather").html(weatherData.now.text);
@@ -150,7 +152,7 @@ function renderWeather() {
     });
 }
 
-//根据选中的城市渲染city部分
+//根据选中的城市渲染city
  function renderCity(d) {
      var str = "<li><em>"+d[0]+"</em><span>当前位置</span></li>";
      for(var i=1;i<d.length;i++){
@@ -158,7 +160,6 @@ function renderWeather() {
      }
      $(".city-choosed-list").html(str);
  }
- renderCity(d);
 //search页面
 function changeStyle(d) {
     var $lis = $(".search-sec section ul li");
@@ -168,7 +169,12 @@ function changeStyle(d) {
         }
     })
 }
-changeStyle(d);
+
+function init() {
+    getData();
+    renderCity(d);
+    changeStyle(d);
+}
 $(".search-sec section>ul").tap(function (e) {
     if (e.target.nodeName=== 'LI') {
         if($.inArray(e.target.innerHTML, d) !== -1){
@@ -177,9 +183,7 @@ $(".search-sec section>ul").tap(function (e) {
         else{
             currentCity = e.target.innerHTML;
             d.push(currentCity);
-            renderCity(d);
-            changeStyle(d);
-            getData();
+            init();
             $DIVS.hide();
             $indexSec.show();
         }
@@ -194,7 +198,7 @@ inputHead.tap(function () {
 inputHead.on("input",function () {
     var t = null;
     //需要限定输入进来的是汉字才提交
-    if( $(this).val()!== ""){
+    if( $(this).val()!== "" ){
         clearTimeout(t);
         t = setTimeout(function () {
             var script = document.createElement("script");
@@ -202,9 +206,9 @@ inputHead.on("input",function () {
             document.body.appendChild(script);
         },500);
     }
-    else{
+   /* else{
         cityList.hide();
-    }
+    }*/
 });
 function searchCity(data) {
     if (data.results.length) {
@@ -217,23 +221,24 @@ function searchCity(data) {
             str += "<li data-name=city.name>"+city.path+"</li>";
         });
         cityList.html(str);
+        cityList.tap(function (e) {
+            if (e.target.nodeName=== 'LI'&& $(this).html().indexOf(d) ===-1) {
+                currentCity = e.target.getAttribute('data-name');
+                d.push(currentCity);
+                getData();
+                renderCity(d);
+                changeStyle(d);
+                $DIVS.hide();
+                $indexSec.show();
+                cityList.hide();
+                $(".search-sec section").show();
+            }
+        });
     } else {
         cityList.hide();
     }
 }
-cityList.tap(function (e) {
-    if (e.target.nodeName=== 'LI') {
-        currentCity = e.target.getAttribute('data-name');
-        getData();
-        d.push(currentCity);
-        renderCity(d);
-        changeStyle(d);
-        $DIVS.hide();
-        $indexSec.show();
-        // cityList.style.display = 'none';
-    }
-})
-//数据请求未完成
+init();
 
 
 
