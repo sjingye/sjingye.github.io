@@ -172,6 +172,8 @@ function changeStyle(d) {
 
 function init() {
     getData();
+    $DIVS.hide();
+    $indexSec.show();
     renderCity(d);
     changeStyle(d);
 }
@@ -211,9 +213,6 @@ inputHead.on("input",function () {
             document.body.appendChild(script);
         },500);
     }
-   /* else{
-        cityList.hide();
-    }*/
 });
 function searchCity(data) {
     if (data.results.length) {
@@ -228,15 +227,11 @@ function searchCity(data) {
         cityList.html(str);
         cityList.tap(function (e) {
             if (e.target.nodeName=== 'LI'&& $(this).html().indexOf(d) ===-1) {
-                console.log(e.target.getAttribute('data-name'));
                 currentCity = e.target.getAttribute('data-name');
                 d.push(currentCity);
-                getData();
-                renderCity(d);
-                changeStyle(d);
-                $DIVS.hide();
-                $indexSec.show();
+                init();
                 cityList.hide();
+                inputHead.val("");
                 $(".search-sec section").show();
             }
         });
