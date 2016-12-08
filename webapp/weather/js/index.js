@@ -197,7 +197,7 @@ $(".search-sec section>ul").tap(function (e) {
 var inputHead = $(".search-sec form input");
 var cityList =  $(".search-sec .cityList");
 inputHead.tap(function () {
-    $("section").hide();
+    $(".search-sec section").hide();
     $(".remind").show();
 })
 inputHead.on("input",function () {
