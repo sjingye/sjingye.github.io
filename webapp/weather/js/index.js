@@ -182,8 +182,8 @@ $(".search-sec section>ul").tap(function (e) {
         }
         else{
             currentCity = e.target.innerHTML;
-            d.unshif(currentCity);
-            $(".city-choosed-list li em").eq(0).html(d[0]);
+            d.push(currentCity);
+            $(".city-choosed-list li em").eq(0).html(d[d.length-1]);
             init();
             $DIVS.hide();
             $indexSec.show();
