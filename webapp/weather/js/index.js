@@ -207,7 +207,7 @@ inputHead.on("input",function () {
         clearTimeout(t);
         t = setTimeout(function () {
             var script = document.createElement("script");
-            script.src = 'https://api.thinkpage.cn/v3/location/search.json?ts=1480426837&ttl=3600000&uid=UDA821CDB4&sig=WsJ%2FO4reAerB%2FHmulk0z09sQ6tE%3D&callback=searchCity&q='+$(inputHead).val();
+            script.src = 'https://api.thinkpage.cn/v3/location/search.json?ts=1480426837&ttl=3600000&uid=UDA821CDB4&sig=WsJ%2FO4reAerB%2FHmulk0z09sQ6tE%3D&callback=searchCity&q='+inputHead.val();
             document.body.appendChild(script);
         },500);
     }
