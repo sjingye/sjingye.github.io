@@ -1,0 +1,62 @@
+html{
+    display: block;
+    height:100%;
+}
+body{
+    width:10rem;
+    font-family: "Helvetica Neue",Helvetica,STHeiTi,sans-serif;
+    margin: 0;
+    background-color:  #FFF;
+    color: #333;
+    font-size: 13px;
+    -webkit-text-size-adjust:100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+ul,p,h1,h2,h3,h4,h5,h6{
+    margin:0;
+    padding:0;
+    font-weight:normal;
+}
+li{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+a,input,button{
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+input,button{
+    -webkit-apprence:none;
+    border-redius:0;
+    border:0;
+    padding: 0;
+}
+input{
+    outline:none;
+    resize: none;
+    border:none;
+    background: transparent;
+}
+a,a:hover{
+	text-decoration: none;
+}
+em{
+	font-style:normal;
+}
+strong{
+	font-weight: normal;
+}
+img{
+    vertical-align: top;
+    border:none;
+}
+.clearfix:after{
+    content:"";
+    display: block;
+    clear:both;
+}
+
+
+
+

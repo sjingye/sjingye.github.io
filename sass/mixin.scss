@@ -1,0 +1,18 @@
+@function size($size) {
+  $width: 750;
+  $scale: 10;
+  @return ($size / $width * $scale) * 1rem;
+}
+@mixin data-dpr($field,$val) {
+  [data-dpr="1"] & {
+    #{$field}: $val*1px;
+  }
+  [data-dpr="2"] & {
+    #{$field}: $val*2px;
+  }
+  [data-dpr="3"] & {
+    #{$field}: $val*3px;
+  }
+}
+$main-color-weekend: #e31b24;
+$main-color: #0d0d0d;

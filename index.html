@@ -1,11 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="./public/lib-flexible-master/build/flexible_css.debug.js" ></script>
+    <script src="./public/lib-flexible-master/build/flexible.debug.js" ></script>
+    <script src="./public/zepto/src/zepto.js"></script>
+    <script src="./public/zepto/src/event.js"></script>
+    <script src="./public/zepto/src/touch.js"></script>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-	<a href="webapp/weather/index.html">天气</a>
-	<a href="webapp/weather/index.html">天气</a>
+    <div class="wrap">
+        <div class="time">
+            <p class="hm clearfix">
+                <span></span>
+                <strong>:</strong>
+                <em></em>
+            </p>
+            <p class="clearfix">
+                <span></span>
+                <em></em>
+            </p>
+        </div>
+        <ul class="icon">
+            <li>
+                <div>
+                    <a href="./webapp/weather/index.html"></a>
+                    <p>天气</p>
+                </div>
+                <div>
+                    <a href="./webapp/calendar/index.html"></a>
+                    <p>日历</p>
+                </div>
+                <div>
+                    <a href="./webapp/clock/index.html"></a>
+                    <p>时钟</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+<script src="js/index.js"></script>
 </body>
 </html>
