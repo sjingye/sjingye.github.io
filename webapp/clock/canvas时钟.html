@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../public/lib-flexible-master/build/flexible.js" ></script>
+    <title>canvas时钟</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        h2{
+            width:2rem;
+            margin:1rem auto 0;
+            text-align: center;
+            font-size: 0.5rem;
+        }
+        #clock{
+            width:6rem;
+            height:5rem;
+            margin:2rem ;
+        }
+    </style>
+</head>
+<body>
+    <h2>时钟</h2>
+    <canvas id="clock" width="600" height="500">您的浏览器环境不支持canvas，请升级</canvas>
+<script>
+    function canvasClock(ops) {
+        if(!ops.canvas || ops.canvas instanceof HTMLCanvasElement=== false){
+            throw new Error("canvas不存在");
+        }
+        this.canvas = ops.canvas;
+        this.ctx = this.canvas.getContext("2d");
+        this.W = this.canvas.width;
+        this.H = this.canvas.height;
+        this.R =  this.H/2;
+    }
+    //画最外面的圆
+    canvasClock.prototype.createOuter = function () {
+        this.ctx.save();
+        this.ctx.beginPath();
+        this.ctx.translate(this.W/2,this.H/2);
+        this.ctx.lineWidth = 4;
+        this.ctx.strokeStyle = "#333";
+        this.ctx.arc(0,0,this.R-2,0,Math.PI*2);
+        this.ctx.stroke();
+        this.ctx.restore();
+        return this;
+    };
+    //画数字
+    canvasClock.prototype.createNum = function () {
+        var arrNum = [3,2,1,12,11,10,9,8,7,6,5,4];
+        var _this = this;
+        this.ctx.save();
+        this.ctx.beginPath();
+        this.ctx.translate(this.W/2,this.H/2);
+        this.ctx.font = "28px Arial";
+        this.ctx.textAlign = "center";
+        this.ctx.textBaseline = "middle";
+        var linear = this.ctx.createLinearGradient(0,0,600,400);
+        linear.addColorStop(0,'#C540F5');
+        linear.addColorStop(0.5,'#f0f');
+        linear.addColorStop(1,'#F5247F');
+        this.ctx.fillStyle= linear;
+        arrNum.forEach(function (value,index) {
+            var rad = Math.PI*2*index/12;
+            var x = (_this.R-36)*Math.cos(rad);
+            var y= -(_this.R-36)*Math.sin(rad);
+            _this.ctx.fillText(value,x,y);
+        });
+        this.ctx.stroke();
+        this.ctx.restore();
+        return this;
+    };
+    //画刻度
+    canvasClock.prototype.createTicks = function () {
+        this.ctx.save();
+        this.ctx.translate(this.W/2,this.H/2);
+        var r;
+        for (var i=0;i<60;i++){
+            var rad = Math.PI*2*i/60;
+            var x = (this.R-14)*Math.cos(rad);
+            var y= -(this.R-14)*Math.sin(rad);
+            if(i%5===0){
+                r=3;
+                this.ctx.fillStyle="#1A1919";
+            }else{
+                r=2;
+                this.ctx.fillStyle="#333";
+            }
+            this.ctx.beginPath();
+            this.ctx.arc(x,y,r,0,Math.PI*2);
+            this.ctx.fill();
+        }
+        this.ctx.restore();
+        return this;
+    };
+    //画时针
+    canvasClock.prototype.createHours = function (h) {
+        this.ctx.save();
+        var rad = Math.PI*2/12*(h);
+        this.ctx.translate(this.W/2,this.H/2);
+        this.ctx.rotate(rad);
+        this.ctx.beginPath();
+        this.ctx.lineWidth = 8;
+        this.ctx.lineCap = "round";
+        this.ctx.lineTo(0,10);
+        this.ctx.lineTo(0,-(this.R-90));
+        this.ctx.stroke();
+        this.ctx.restore();
+        return this;
+    };
+    //画分针
+    canvasClock.prototype.createMins = function (m) {
+        this.ctx.save();
+        this.ctx.translate(this.W/2,this.H/2);
+        var rad = Math.PI*2/60*(m);
+        this.ctx.rotate(rad);
+        this.ctx.lineWidth = 5;
+        this.ctx.lineCap = "round";
+        this.ctx.beginPath();
+        this.ctx.lineTo(0,10);
+        this.ctx.lineTo(0,-(this.R-50));
+        this.ctx.stroke();
+        this.ctx.restore();
+        return this;
+    };
+    //画秒针
+    canvasClock.prototype.createSecs = function (s) {
+        this.ctx.save();
+        this.ctx.translate(this.W/2,this.H/2);
+        var rad = Math.PI*2/60*(s);
+        this.ctx.rotate(rad);
+        this.ctx.beginPath();
+        this.ctx.lineTo(-3,0);
+        this.ctx.lineTo(3,0);
+        this.ctx.lineTo(1,-(this.R-20));
+        this.ctx.lineTo(-1,-(this.R-20));
+        this.ctx.closePath();
+        this.ctx.fillStyle="red";
+        this.ctx.fill();
+        this.ctx.restore();
+        return this;
+    };
+    //画小点
+    canvasClock.prototype.createDot = function () {
+        this.ctx.save();
+        this.ctx.translate(this.W/2,this.H/2);
+        this.ctx.beginPath();
+        this.ctx.arc(0,0,10,0,Math.PI*2);
+        this.ctx.fillStyle="red";
+        this.ctx.fill();
+        this.ctx.restore();
+        return this;
+    };
+    //获取时间,渲染
+    canvasClock.prototype.init = function () {
+        var _this = this;
+        setInterval(function () {
+            var time = new Date();
+            var s = time.getSeconds();
+            var m = time.getMinutes();
+            var h = time.getHours();
+            //是 Canvas 2D API 设置指定矩形区域内（以 点 (x, y) 为起点，范围是(width, height) ）所有像素变成透明，并擦除之前绘制的所有内容的方法。
+            _this.ctx.clearRect(0,0,_this.W,_this.H);
+            _this.update(h,m,s);
+        },500)
+    }
+    //渲染的全部执行函数
+    canvasClock.prototype.update = function (h,m,s) {
+        this.createOuter().createNum().createTicks().createHours(h).createMins(m).createSecs(s).createDot();
+        return this;
+    };
+    var clock = new canvasClock({
+        canvas: document.getElementById("clock")
+    });
+    clock.init();
+</script>
+</body>
+</html>
