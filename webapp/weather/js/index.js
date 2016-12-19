@@ -110,14 +110,14 @@
         var nowPoint = e.changedTouches[0].pageX;
         var disX = nowPoint-startPoint;
         var w = window.innerWidth;
-        if(Math.abs(disX) <= w*5/100){
+        if(Math.abs(disX) <= w*10/100){
             return;
         }
-        if( disX> w*5/100){
+        if( disX> w*10/100){
             a = a+1;
             a = a%d.length;
         }
-        else if( disX< -w*5/100){
+        else if( disX< -w*10/100){
             a = a-1;
             if(a<0){
                 a = d.length-1;
