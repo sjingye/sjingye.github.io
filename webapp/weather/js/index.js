@@ -89,22 +89,32 @@
     var indexSec = document.querySelector(".index-sec");
     var startPoint=0;
     var a = d.length;
-    $indexSec.swipeLeft(function(){
-        console.log("left");
-    })
-    /*indexSec.addEventListener('touchstart', function(e) {
+    indexSec.addEventListener('touchstart', function(e) {
         startPoint = e.changedTouches[0].pageX;
     });
-    indexSec.addEventListener('touchmove', function(e) {
+    indexSec.addEventListener('touchend', function(e) {
         var nowPoint = e.changedTouches[0].pageX;
         var disX = nowPoint-startPoint;
         var w = window.innerWidth;
-        if( disX> w*5/100){
-            console.log(1);
-            a = a+1;
-            currentCity = d[0];
+        if(Math.abs(disX) <= w*5/100){
+            return;
         }
-    });*/
+        if( disX> w*5/100){
+            a = a+1;
+            a = a%d.length;
+        }
+        else if( disX< -w*5/100){
+            a = a-1;
+            if(a<0){
+                a = d.length-1;
+            }
+        }
+        currentCity = d[a];
+        d.splice(a,1);
+        d.push(currentCity);
+        init();
+        startPoint= 0;
+    });
 /*2.city页面，根据选中的城市渲染city*/
      function renderCity(d) {
          var str = "<li><em>"+d[d.length-1]+"</em><span>当前位置</span></li>";
