@@ -20,6 +20,20 @@
         $DIVS.hide();
         $citySec.show();
     });
+/*//利用localstorage存储数据，始终保持与d中的数据同步
+    var d = ["北京"];
+    function storage() {
+        if (window.localStorage) {
+            localStorage.setItem("menuCity", d);
+        } else {
+            Cookie.write("menuCity", d);
+        }
+        var strStoreDate = window.localStorage? localStorage.getItem("menuCity"): Cookie.read("menuCity");
+        strStoreDate.split(",").each(function(value, index) {
+            d = ["北京"];
+            d.push(value);
+        });
+    }*/
 
 /*2.首页获取数据，并显示*/
     var weatherData = {
@@ -28,9 +42,9 @@
         "last_update": "",
         "daily": []
     };
-    var currentCity="北京";
+    var d = ["北京"];
+    var currentCity=d[d.length-1];
     var n=0;
-    var d = [currentCity];
     // 利用jsonp获取天气数据
     function getData() {
         var script1 = document.createElement("script");
@@ -222,7 +236,8 @@
             $(".search-sec section").show();
         }
     });
-    init();
+
+init();
 
 
 
