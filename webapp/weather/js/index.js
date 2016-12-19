@@ -102,7 +102,7 @@
     // 天气页面滑动,切换城市
     var indexSec = document.querySelector(".index-sec");
     var startPoint=0;
-    var a = d.length;
+    var a = d.length-1;
     indexSec.addEventListener('touchstart', function(e) {
         startPoint = e.changedTouches[0].pageX;
     });
@@ -127,7 +127,6 @@
         d.splice(a,1);
         d.push(currentCity);
         init();
-        startPoint= 0;
     });
 /*2.city页面，根据选中的城市渲染city*/
      function renderCity(d) {
