@@ -21,7 +21,6 @@ body {
 header {
   width: 10rem;
   height: 1.33333rem;
-  border: 1px solid #eeeeee;
   color: #e31b24;
   position: relative;
   /*.today{
