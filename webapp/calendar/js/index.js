@@ -24,6 +24,9 @@ class timePicker{
         //触摸选择日期事件
         this.container.tap(function (event) {
             let $target = $(event.target);
+            if($target.hasClass("past")){
+                return;
+            }
             if($target.is("li")){
                 let lis = $(".contain li");
                 let dat = new Date(self.date);
@@ -31,9 +34,6 @@ class timePicker{
                 let choosedIndex = lis.index(self.choosedEle);
                 dat.setDate(index-choosedIndex+dat.getDate());
                 self.chooseDate(dat);
-                // $(".choosed-time").html(self.getSelectedDate());
-                // self.choosedEle = $target;
-                // console.log(lis.index(self.choosedEle));
             }
         })
     };
