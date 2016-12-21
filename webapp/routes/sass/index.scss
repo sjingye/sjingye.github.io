@@ -12,6 +12,7 @@
 	left: 0;
 	z-index: 3;
 	overflow: hidden;
+	display: none;
 	ul{
 		width: 40rem;
 		height: 100%;
@@ -21,9 +22,8 @@
 			float: left;
 		}
 	}
-	//display: none;
 }
-//头部
+//2.头部
 .top{
 	height: 2.5rem;
 	position: fixed;
@@ -31,26 +31,23 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color: #2b3139;
 	z-index:2;
-}
-.top-label{
 	background-color: #2b3139;
 }
-.more{
+/*.more{
 	left:0;
 }
 .search{
 	right:0;
 	background-size: 0.426667rem 0.426667rem;
-}
+}*/
 .top-label h2{
 	height:1.173333rem;
 	line-height: 1.173333rem;
 	color:#fff;
 	font-weight: normal;
 	text-align: center;
-	letter-spacing: 4px;
+	letter-spacing: 6px;
 	@include data-dpr("font-size",18)
 }
 .top-label a{
@@ -116,18 +113,20 @@ nav a.active{
 #popular-recommand{
 	width:10rem;
 }
-.bannerpic{
-	width:50rem;
-	height:10.0rem;
-	transition: 1s;
-	position: relative;
-	overflow: hidden;
+.swiper-container{
+	width: 10rem;
+	height: 10.0rem;
+	.swiper-slide{
+		width: 10rem;
+		height: 10rem;
+		text-align: center;
+		img{
+			width: 10rem;
+			height: 10rem;
+		}
+	}
 }
-.bannerpic img{
-	float:left;
-	width:10rem;
-	height:10rem;
-}	
+
 .symbol{
 	width:1.333333rem;
 	height:0.16rem;
@@ -150,11 +149,20 @@ nav a.active{
 }
 .dif-sections{
 	width:10rem;
+	margin-bottom: 1rem;
 }
+/*.dif-sections li {
+	height: size(700);
+}*/
 .dif-sections li >h3{
 	color:#333;
-	margin:1.0rem 0 0.4rem 0.4rem;
-	@include data-dpr("font-size",16)
+	margin:0.7rem 0 0.2rem 0.4rem;
+	@include data-dpr("font-size",17)
+}
+.dif-sections li >h4{
+	color:#666;
+	margin:0 0 0.2rem 0.4rem;
+	@include data-dpr("font-size",13)
 }
 .dif-sections li >img{
 	width:10rem;
@@ -163,7 +171,7 @@ nav a.active{
 .dif-sections li >p{
 	width:9.2rem;
 	height:0.4rem;
-	margin:0.4rem 0 0 0.4rem;
+	margin:0.4rem 0 0.2rem 0.4rem;
 	padding:0 0.4rem;
 	color:#333;
 	@include data-dpr("font-size",14)

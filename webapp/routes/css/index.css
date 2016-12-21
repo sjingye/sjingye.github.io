@@ -14,7 +14,6 @@ body {
   width: 10rem;
   margin: 0;
   color: #9da1a7;
-  background-color: #F5F5F5;
   font-size: 0.16rem;
   font-family: "Helvetica Neue", Helvetica,STHeiTi ,sans-serif; }
 
@@ -124,7 +123,8 @@ img {
   top: 0;
   left: 0;
   z-index: 3;
-  overflow: hidden; }
+  overflow: hidden;
+  display: none; }
   .enter ul {
     width: 40rem;
     height: 100%; }
@@ -140,26 +140,23 @@ img {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #2b3139;
-  z-index: 2; }
-
-.top-label {
+  z-index: 2;
   background-color: #2b3139; }
 
-.more {
-  left: 0; }
-
-.search {
-  right: 0;
-  background-size: 0.426667rem 0.426667rem; }
-
+/*.more{
+	left:0;
+}
+.search{
+	right:0;
+	background-size: 0.426667rem 0.426667rem;
+}*/
 .top-label h2 {
   height: 1.173333rem;
   line-height: 1.173333rem;
   color: #fff;
   font-weight: normal;
   text-align: center;
-  letter-spacing: 4px; }
+  letter-spacing: 6px; }
   [data-dpr="1"] .top-label h2 {
     font-size: 18px; }
   [data-dpr="2"] .top-label h2 {
@@ -246,18 +243,16 @@ nav a.active {
 #popular-recommand {
   width: 10rem; }
 
-.bannerpic {
-  width: 50rem;
-  height: 10.0rem;
-  -webkit-transition: 1s;
-          transition: 1s;
-  position: relative;
-  overflow: hidden; }
-
-.bannerpic img {
-  float: left;
+.swiper-container {
   width: 10rem;
-  height: 10rem; }
+  height: 10.0rem; }
+  .swiper-container .swiper-slide {
+    width: 10rem;
+    height: 10rem;
+    text-align: center; }
+    .swiper-container .swiper-slide img {
+      width: 10rem;
+      height: 10rem; }
 
 .symbol {
   width: 1.333333rem;
@@ -286,17 +281,31 @@ nav a.active {
   background-color: #00bebe; }
 
 .dif-sections {
-  width: 10rem; }
+  width: 10rem;
+  margin-bottom: 1rem; }
 
+/*.dif-sections li {
+	height: size(700);
+}*/
 .dif-sections li > h3 {
   color: #333;
-  margin: 1.0rem 0 0.4rem 0.4rem; }
+  margin: 0.7rem 0 0.2rem 0.4rem; }
   [data-dpr="1"] .dif-sections li > h3 {
-    font-size: 16px; }
+    font-size: 17px; }
   [data-dpr="2"] .dif-sections li > h3 {
-    font-size: 32px; }
+    font-size: 34px; }
   [data-dpr="3"] .dif-sections li > h3 {
-    font-size: 48px; }
+    font-size: 51px; }
+
+.dif-sections li > h4 {
+  color: #666;
+  margin: 0 0 0.2rem 0.4rem; }
+  [data-dpr="1"] .dif-sections li > h4 {
+    font-size: 13px; }
+  [data-dpr="2"] .dif-sections li > h4 {
+    font-size: 26px; }
+  [data-dpr="3"] .dif-sections li > h4 {
+    font-size: 39px; }
 
 .dif-sections li > img {
   width: 10rem;
@@ -305,7 +314,7 @@ nav a.active {
 .dif-sections li > p {
   width: 9.2rem;
   height: 0.4rem;
-  margin: 0.4rem 0 0 0.4rem;
+  margin: 0.4rem 0 0.2rem 0.4rem;
   padding: 0 0.4rem;
   color: #333; }
   [data-dpr="1"] .dif-sections li > p {

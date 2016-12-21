@@ -6,7 +6,9 @@
     <script src="../../public/zepto/src/zepto.js"></script>
     <script src="../../public/zepto/src/event.js"></script>
     <script src="../../public/zepto/src/touch.js"></script>
+    <script src="../../public/swiper-3.4.1.jquery.min.js"></script>
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="../../public/swiper-3.4.1.min.css" />
     <title>index</title>
 </head>
 <body>
@@ -32,44 +34,57 @@
      <!-- 主体部分 -->
      <section class ="wrap">
          <div id="popular-recommand"  class="active">
-             <div class="bannerpic">
-                 <div class="clearfix">
-                     <img src="img/banner1.png" alt="">
-                     <img src="img/banner2.png" alt="">
-                     <img src="img/banner3.png" alt="">
-                     <img src="img/banner4.png" alt="">
-                     <img src="img/banner5.png" alt="">
+             <div class="swiper-container">
+                 <div class="clearfix swiper-wrapper">
+                     <div class="swiper-slide">
+                         <img src="img/banner1.png" alt="">
+                     </div>
+                     <div class="swiper-slide">
+                         <img src="img/banner2.png" alt="">
+                     </div>
+                     <div class="swiper-slide">
+                         <img src="img/banner3.png" alt="">
+                     </div>
+                     <div class="swiper-slide">
+                         <img src="img/banner4.png" alt="">
+                     </div>
+                     <div class="swiper-slide">
+                         <img src="img/banner5.png" alt="">
+                     </div>
                  </div>
-                 <ul class="symbol clearfix">
+                 <!--<ul class="symbol clearfix">
                      <li></li>
                      <li></li>
                      <li></li>
                      <li></li>
                      <li></li>
-                 </ul>
+                 </ul>-->
              </div>
 
              <ul class="dif-sections">
                  <li>
                      <h3>体验</h3>
+                     <h4>体验新的环境，走过的路多</h4>
                      <img src="img/mp2.jpg" alt="">
-                     <p>
+                     <p class="clearfix">
                          <span>Riva小屋</span>
                          <strong>￥ 378</strong>
                      </p>
                  </li>
                  <li>
                      <h3>房源</h3>
+                     <h4>优质房源，给你家的感觉</h4>
                      <img src="img/mp1.jpg" alt="">
-                     <p>
+                     <p class="clearfix">
                          <span>Riva小屋</span>
                          <strong>￥ 378</strong>
                      </p>
                  </li>
                  <li>
                      <h3>旅游目的地精选</h3>
+                     <h4>赏美景，住美屋</h4>
                      <img src="img/mp4.jpg" alt="">
-                     <p>
+                     <p class="clearfix">
                          <span>东京</span>
                          <strong>元 378</strong>
                      </p>

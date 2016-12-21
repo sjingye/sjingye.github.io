@@ -1,7 +1,7 @@
 'use strict';
 let contain = $(".wrap .contain");
 class timePicker{
-    constructor(container){
+    constructor(container,date,choosedEle){
     	this.container = container;
     	this.date = new Date();
     	this.choosedEle = null;
