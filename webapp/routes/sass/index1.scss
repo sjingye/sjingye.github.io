@@ -1,0 +1,287 @@
+@import "mixin";
+@import "public";
+@import "reset";
+@import "globle";
+/*top*/
+.more{
+	left:0;
+	//background-position: ;
+}
+.search{
+	right:0;
+	//background-position: ;
+	background-size: 0.426667rem 0.426667rem;
+}
+.top-label h2{
+	height:1.173333rem;
+	line-height: 1.173333rem;
+	color:#fff;
+	font-weight: normal;
+	text-align: center;
+	letter-spacing: size(4);
+	@include data-dpr("font-size",18);
+}
+.top-label a{
+	width:0.6rem;
+	height: 0.42rem;
+	padding:0.18rem 0 0;
+}
+.icon-list{
+	/*width:0.52rem;
+	height:0.36rem;*/
+	left:0.4rem;
+	bottom:0.4rem;
+}
+.icon-list img{
+	width:0.52rem;
+	height:0.36rem;
+}
+.icon-search{
+/*	width:0.413333rem;
+	height:0.426667rem;*/
+	right:0.4rem;
+	bottom:0.36rem;
+}
+.icon-search img{
+	width:0.413333rem;
+	height:0.426667rem;
+}
+/*end top*/
+
+/*wrap*/
+.wrap{
+	width: 10rem;
+	height:1.333333rem;
+	background: #191f28;
+}
+nav{
+	width:  8rem;
+	margin:0 1rem;
+	height:1.333333rem;
+	line-height: 1.333333rem;
+	display: flex;
+	flex-direction: row;
+  	justify-content: space-between;
+  	align-items: center;
+}
+nav a{
+	color:#b2bdc1;
+	display:inline-block;
+	@include data-dpr("font-size",14);
+}
+nav a.active{
+	color:#00bebe;
+}
+.intere-authors{
+	height:1.6rem;
+	line-height: 1.6rem;
+	padding: 0 0.4rem;
+	border-bottom: 1px solid #dedede;
+	position: relative;
+}
+.intere-authors span{
+	color:#3c4350;
+	@include data-dpr("font-size",14);
+}
+.authors-pics{
+	position: absolute;
+	right:0.8rem;
+	bottom:0.373333rem;
+	width:1.84rem;
+	height: 0.8rem;
+}
+.authors-pics a{
+	float: left;
+	display: block;
+	width: 0.8rem;
+	height: 0.8rem;
+	margin-left: -0.266667rem;
+}
+.authors-pics a img{
+	width: 0.8rem;
+	height: 0.8rem;
+}
+.author-one{
+	z-index: 3;
+}
+.author-two{
+	opacity: 0.8;
+	z-index: 2;
+}
+.author-three{
+	opacity: 0.6;
+	z-index: 1;
+}
+.icon-next{
+	position: absolute;
+	right:0.4rem;
+	bottom:0.6rem;
+	display: block;
+	width:0.2rem;
+	height:0.36rem;
+}
+.icon-next img{
+	width:0.2rem;
+	height:0.36rem;
+	vertical-align: top;
+}
+.feed-section{
+	height:7.36rem;
+	border-bottom: 1px solid #dedede;
+}
+.feed-item{
+	display: block;
+	height:3.68rem;
+	padding:0 0.4rem;
+	border-bottom: 1px solid #dedede;
+}
+.feed-item>img{
+	width:2.88rem;
+	height:2.88rem;
+	margin:0.4rem  0.4rem 0.4rem 0;
+}
+.item-details{
+	margin:0.64rem 0 ;
+	width: 5.653333rem;
+	height: 2.4rem;
+}
+.item-details h3{
+	color: #3c4350;
+	line-height: size(14);
+	margin-bottom: 0.4rem;
+	@include data-dpr("font-size",14);
+}
+.item-details >p {
+	color:#9da1a7;
+	line-height: 1.6em;
+	word-wrap: break-word;
+}
+[data-dpr="1"] .item-details >p {
+	color:#9da1a7;
+	line-height: 1em;
+	word-wrap: break-word;
+	@include data-dpr("font-size",12);
+}
+.feed-info{
+	width: 5.653333rem;
+	line-height: 1rem;
+	height:1rem;
+	@include data-dpr("font-size",12);
+
+}
+.feed-info p{
+	float:left;
+	width:1.333333rem;
+	height: 0.266667rem;
+	color:#9da1a7;
+	line-height: 0.266667rem;
+	margin-top: 0.4rem;
+	@include data-dpr("font-size",12);
+}
+.feed-info p span,.feed-info p em{
+	float: left;
+}
+.feed-info p em{
+	text-indent: 0.2rem;
+}
+.feed-info img{
+	vertical-align: top;
+}
+.icon-like{
+	width:0.28rem;
+	height:0.266667rem;
+}
+.icon-like img{
+	width:0.28rem;
+	height:0.266667rem;
+}
+.icon-comment,.icon-comment img{
+	/*width: 0.266667rem;*/
+	height: 0.266667rem;
+}
+
+
+.hotel-lists{
+	width:10rem;
+}
+.list-item{
+	height: 10.6rem;
+}
+.list-item-top{
+	margin:0 0.4rem;
+	height:1.626667rem;
+	line-height: 1.6rem;
+}
+.list-item-top>img{
+	height: 0.8rem;
+	width:0.8rem;
+	margin-top: 0.4rem;
+}
+.list-item-top h3{
+	color:#3c4350;
+	margin-left: 0.32rem;
+	@include data-dpr("font-size",14);
+}
+.list-item-top span{
+	display: block;
+	@include data-dpr("font-size",12);
+
+}
+.item-pic{
+	display: block;
+	width:10rem;
+	height:4.933333rem;
+}
+.list-item>p{
+	margin:0.4rem 0.4rem  0.2rem 0.4rem;
+	color:#696d6f;
+	line-height: 1.6em;
+	word-wrap: break-word;
+	@include data-dpr("font-size",14);
+}
+.item-more{
+	display:block;
+}
+.item-info{
+	margin-left: 0.4rem;
+}
+.mask{
+	width:10rem;
+	height:17.786667rem;
+	position: fixed;
+	left:0;
+	top:0;
+	z-index:2;
+	display: none;
+}
+.mask .mask-up{
+	width:10rem;
+	height:17.786667rem;
+	background-color:#1f252e;
+	opacity: 0.6;
+}
+.mask .sidebar{
+	width:2.0rem;
+	height:17.786667rem;
+	background-color: #fff;
+	position: absolute;
+	top:0;
+}
+.sidebar li{
+	float:left;
+	width:0.6rem;
+	height:0.6rem;
+	padding:0.7rem 0.7rem;
+}
+.sidebar li a{
+	display: block;
+	width:0.6rem;
+	height:0.6rem;
+	background-size: contain;
+}
+.sidebar li img{
+	width:0.6rem;
+	height:0.6rem;
+}
+
+

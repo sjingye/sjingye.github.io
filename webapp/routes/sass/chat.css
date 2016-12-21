@@ -1,0 +1,97 @@
+/*chat*/
+.content{
+	width:0.48rem;
+	height: 17.786667rem;
+	position: relative;
+	overflow: hidden;
+	background-color: #fafafa;
+}
+.wrap{
+	width:10rem;
+	position: absolute;
+	top:0;
+	left:0;
+}
+.service-talk{
+	float:left;
+	margin-left: 0.4rem;
+	background-color: #fafafa;
+}
+.service-talk>div,.customer-talk>div{
+	margin:  0;
+	width:7.2rem;
+	border-radius:8px;
+	padding:0.4rem;
+	font-size: 14px;
+	line-height: 1.6em;
+}
+.service-talk>div{
+	background-color: #f2f2f2;
+	color: #696d6f;
+}
+.customer-talk{
+	float:right;
+	margin-right: 0.4rem;
+	background-color: #fafafa;
+}
+.customer-talk>div{
+	background-color: #06bebd;
+	color:#fff;
+}
+.service-talk .small-pic{
+	margin-top: 0.533333rem;
+}
+.service-talk .small-pic img{
+	width: 1.6rem;
+	height: 1.6rem;
+	margin-right: 0.266667rem;
+}
+.service-talk .small-pic img:last-child{
+	margin-right: 0;
+}
+.talk-time{
+	margin-top: 0.266667rem;
+	font-size: 12px;
+	color:#9da1a7;
+}
+.customer-talk .talk-time{
+	color:#97dcdb;
+}
+
+/*talk-box*/
+.talk-box{
+	border-top: 1px solid #dedede;
+	width:9.2rem;
+	height:1.76rem;
+	line-height: 1.76rem;
+	padding:0 0.4rem;
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+	position: fixed;
+	bottom:0;
+	background: #fff;
+}
+.add-talk{
+	display: block;
+	width: 0.426667rem;
+	height: 0.426667rem;
+	float:left;
+	/*background:url(../img/images/add.png) no-repeat;*/
+	background-size: contain;
+}
+.talk-box .input-talk{
+	width:6rem;
+	height: 0.666667rem;
+	border-bottom: 1px solid #dedede;
+	font-size: 14px;
+	padding:0.133333rem;
+	line-height: 1.4em;
+	margin:0 auto;
+	word-break: break-all; 
+}
+.talk-box  .send{
+	float:right;
+	color:#06bebd;
+	font-size: 16px;
+}
