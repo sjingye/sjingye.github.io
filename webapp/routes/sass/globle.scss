@@ -9,7 +9,7 @@
 	h2{
 		height:1.173333rem;
 		line-height: 1.173333rem;
-		font-size: 16px;
+		@include data-dpr("font-size",16);
 		color:#fff;
 		font-weight: normal;
 		text-align: center;
@@ -27,8 +27,7 @@
 	left:0.133333rem;
 	bottom:0.4rem;
 	img{
-		width:0.24rem;
-		height:0.413333rem;
+		width: 0.3rem;
 	}
 }
 .comment{

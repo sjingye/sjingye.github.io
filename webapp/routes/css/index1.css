@@ -68,10 +68,15 @@ img {
   .top-label h2 {
     height: 1.173333rem;
     line-height: 1.173333rem;
-    font-size: 16px;
     color: #fff;
     font-weight: normal;
     text-align: center; }
+    [data-dpr="1"] .top-label h2 {
+      font-size: 16px; }
+    [data-dpr="2"] .top-label h2 {
+      font-size: 32px; }
+    [data-dpr="3"] .top-label h2 {
+      font-size: 48px; }
   .top-label a {
     position: absolute;
     display: block;
@@ -84,8 +89,7 @@ img {
   left: 0.133333rem;
   bottom: 0.4rem; }
   .prev img {
-    width: 0.24rem;
-    height: 0.413333rem; }
+    width: 0.3rem; }
 
 .comment {
   width: 9.2rem;

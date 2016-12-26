@@ -6,7 +6,6 @@ var serviceImgs = [
 ];
 var services = $(".hotel-service li");
 var servicesBig = $(".hotel-service li img:first-child");
-console.log(servicesBig)
 services.tap(function () {
     services.removeClass("active");
     $(this).addClass("active");

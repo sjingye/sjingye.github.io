@@ -89,8 +89,7 @@ nav{
 nav a{
 	color:#b2bdc1;
 	display:inline-block;
-	@include data-dpr("font-size",14)
-
+	@include data-dpr("font-size",15)
 }
 nav a.active{
 	color:#00bebe;
@@ -119,7 +118,7 @@ nav a.active{
 	.swiper-slide{
 		width: 10rem;
 		height: 10rem;
-		text-align: center;
+		//text-align: center;
 		img{
 			width: 10rem;
 			height: 10rem;
@@ -151,38 +150,41 @@ nav a.active{
 	width:10rem;
 	margin-bottom: 1rem;
 }
-/*.dif-sections li {
-	height: size(700);
-}*/
-.dif-sections li >h3{
+dif-sections a {
+	display: block;
+}
+.dif-sections li a >h3{
 	color:#333;
 	margin:0.7rem 0 0.2rem 0.4rem;
-	@include data-dpr("font-size",17)
+	@include data-dpr("font-size",17);
 }
-.dif-sections li >h4{
+.dif-sections li a >h4{
 	color:#666;
 	margin:0 0 0.2rem 0.4rem;
-	@include data-dpr("font-size",13)
+	@include data-dpr("font-size",14)
 }
-.dif-sections li >img{
+.dif-sections li a >img{
 	width:10rem;
 	height:6.4rem;
 }
-.dif-sections li >p{
+.dif-sections li a >p{
 	width:9.2rem;
-	height:0.4rem;
-	margin:0.4rem 0 0.2rem 0.4rem;
+	height:0.6rem;
+	line-height:0.6rem;
+	margin:0.4rem 0 0rem 0.4rem;
 	padding:0 0.4rem;
 	color:#333;
-	@include data-dpr("font-size",14)
+
 }
-.dif-sections li >p span{
+.dif-sections li a >p span{
 	float:left;
+    @include data-dpr("font-size",14);
 }
-.dif-sections li >p strong{
+.dif-sections li a >p strong{
 	float:right;
 	margin:0 1rem 0 0;
 	color:#ff4081;
+	@include data-dpr("font-size",16);
 }
 /*end popular-recommand部分*/
 /*friend-like部分*/
@@ -286,14 +288,14 @@ nav a.active{
 .recommand-text{
 	margin:0.586667rem auto 0;
 	color:#323232;
-	@include data-dpr("font-size",12)
+	@include data-dpr("font-size",14);
 }
 .recommand-text p:first-child span{
 	background-color: #323232;
 	color:#fff;
 }
 .recommand-text p:last-child{
-	margin: 0.48rem 0 0.96rem;
+	margin: 0.48rem 0 0.96rem 0.1rem;
 }
 /*end -friend-like部分*/
 /*for-you部分*/
@@ -306,25 +308,25 @@ nav a.active{
 }
 .intere-authors span{
 	color:#3c4350;
-	@include data-dpr("font-size",14);
+	@include data-dpr("font-size",17);
 }
 .authors-pics{
 	position: absolute;
 	right:0.8rem;
 	bottom:0.373333rem;
-	width:1.84rem;
-	height: 0.8rem;
+	width:3.6rem;
+	height: 1rem;
 }
 .authors-pics a{
 	float: left;
 	display: block;
-	width: 0.8rem;
-	height: 0.8rem;
-	margin-left: -0.266667rem;
+	width: 1rem;
+	height: 1rem;
+	margin-left: 0.2rem;
 }
 .authors-pics a img{
-	width: 0.8rem;
-	height: 0.8rem;
+	width: 1rem;
+	height: 1rem;
 }
 .author-one{
 	z-index: 3;
@@ -372,62 +374,53 @@ nav a.active{
 }
 .item-details h3{
 	color: #3c4350;
-	line-height: 14px;
-	margin-bottom: 0.4rem;
-	@include data-dpr("font-size",14)
+	line-height: 1em;
+	margin-bottom: 0.3rem;
+	@include data-dpr("font-size",16)
 
 }
 .item-details>p{
-	color:#9da1a7;
+	color:#323232;
 	line-height: 1.6em;
 	word-wrap: break-word;
-}
-[data-dpr="1"].item-details>p{
-	color:#9da1a7;
-	line-height: 20px;
-	word-wrap: break-word;
-	@include data-dpr("font-size",12);
+  @include data-dpr("font-size",14);
 }
 .feed-info{
 	width: 5.653333rem;
 	line-height: 1rem;
 	height:1rem;
-	@include data-dpr("font-size",12);
+	@include data-dpr("font-size",14);
 }
 .feed-info p{
 	float:left;
 	width:1.333333rem;
 	height: 0.266667rem;
-	color:#9da1a7;
+	color:#666;
 	line-height: 0.266667rem;
-	margin-top: 0.4rem;
+	margin: 0.4rem 0.2rem 0 0;
 	@include data-dpr("font-size",12);
 }
 .feed-info p span,.feed-info p em{
 	float: left;
 }
 .feed-info p em{
-	text-indent: 0.2rem;
+	text-indent: 0.1rem;
+  line-height: 0.44rem;
 }
 .feed-info img{
 	vertical-align: top;
 }
-.icon-like{
-	width:0.28rem;
-	height:0.266667rem;
-}
 .icon-like img{
-	width:0.28rem;
-	height:0.266667rem;
+	height:0.44rem;
 }
 .icon-comment,.icon-comment img{
-	height: 0.266667rem;
+	height: 0.44rem;
 }
 .hotel-lists{
 	width:10rem;
 }
 .list-item{
-	height: 10.6rem;
+	height: 10.8rem;
 }
 .list-item-top{
 	margin:0 0.4rem;
@@ -435,17 +428,18 @@ nav a.active{
 	line-height: 1.6rem;
 }
 .list-item-top>img{
-	height: 0.8rem;
-	width:0.8rem;
-	margin-top: 0.4rem;
+	height: 1rem;
+	width:1rem;
+	margin-top: 0.2rem;
 }
 .list-item-top h3{
 	color:#3c4350;
 	margin-left: 0.32rem;
-	@include data-dpr("font-size",14);
+	@include data-dpr("font-size",16);
 }
 .list-item-top span{
 	display: block;
+    color: #666;
 	@include data-dpr("font-size",12);
 
 }
@@ -456,7 +450,7 @@ nav a.active{
 }
 .list-item>p{
 	margin:0.4rem 0.4rem  0.2rem 0.4rem;
-	color:#696d6f;
+	color:#323232;
 	line-height: 1.6em;
 	word-wrap: break-word;
 	@include data-dpr("font-size",14);
