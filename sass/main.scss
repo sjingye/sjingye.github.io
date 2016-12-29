@@ -90,48 +90,46 @@ button.navbar-toggle {
 #fullpage{
   color: #fafafa;
 }
-/*section-0 begin*/
+/*section通用*/
 .circle{
     border-radius: 50%;
 }
-.icon-box i.circle{
-    border: 1px solid $main-color;
-    color: #eee;
-    transition: background-color .3s;
-}
-.text-m.circle{
-    width: 58px;
-    height: 58px;
-    padding: 0;
-    line-height: 58px;
-    font-size: 20px;
-    text-align: center;
-}
-.section0{
-    .title-base{
-        h2{
-            color: #fafafa;
-            font-weight: 700;
-            font-size: 28px;
-            margin: 0 0 15px 0 !important;
-        }
-        hr{
-            width: 120px;
-            height: 2px;
-            background-color: $main-color;
-            border: none !important;
-        }
-        P{
-            color: #eee;
-        }
+.SecTitle{
+    h2{
+        color: #fafafa;
+        font-weight: 700;
+        font-size: 26px;
+        margin: 0 0 15px 0 !important;
     }
-    .sec-middle{
-        width: 100px;
-        height: 100px;
+    hr{
+        width: 120px;
+        height: 2px;
+        background-color: $main-color;
+        border: none !important;
+    }
+    P{
+        color: #eee;
+    }
+}
+.secContent{
+    padding-top: 40px;
+}
+/*section通用*/
+/*section-0 begin*/
+.section0{
+    .sec-left{
+        margin-right: 30px;
+    }
+    .sec-right{
+        margin-left: 30px;
+    }
+   /* .sec-middle>article{
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
         background-color: $main-color;
         opacity: .3;
-    }
+    }*/
     .icon-box{
         display: table;
         margin-bottom: 30px;
@@ -156,6 +154,69 @@ button.navbar-toggle {
         }
     }
 }
+.icon-box i.circle{
+    border: 1px solid $main-color;
+    color: #eee;
+    transition: background-color .3s;
+}
+.text-m.circle{
+    width: 58px;
+    height: 58px;
+    padding: 0;
+    line-height: 58px;
+    font-size: 20px;
+    text-align: center;
+}
+/*section-0 end*/
+/*section-1 begin*/
+.section1{
+    .secContent{
+        //margin-top: 20px;
+        h4{
+            color: $main-color;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        p{
+            color: $main-color-font-p;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    }
+}
+/*section-1 end*/
+/*section-2 begin*/
+.section2{
+    .slide-content{
+        margin: 30px 60px 0;
+        >div:nth-of-type(1){
+            margin-bottom: 20px;
+        }
+        >div:nth-of-type(2){
+            padding-left: 40px;
+            h3{
+                font-size: 20px;
+                color: $main-color-font-h;
+                margin-bottom: 25px;
+            }
+            p{
+                font-size: 16px;
+                color: $main-color-font-p;
+            }
+            ul{
+                li{
+                    float: left;
+                    margin:25px 20px 0 0 ;
+                    padding: 4px 8px;
+                    background-color: $main-color-font-h;
+                    color: $main-color;
+                }
+            }
+        }
+
+    }
+}
+/*section-2 end*/
 /*fullpage end*/
 @media (max-width: 992px){
   .navbar-brand {

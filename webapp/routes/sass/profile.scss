@@ -53,8 +53,22 @@
 .comment{
 	padding-top: 0;
 	li{
-		strong{
-			@include data-dpr("font-size",11);
+        >p{
+            margin-bottom: 0.4rem;
+            color: #333;
+            height: 1.8rem;
+            line-height: 1.6em;
+            overflow: hidden;
+            @include data-dpr("font-size",14);
+        }
+        >p.more{
+            overflow: visible;
+            height: auto;
+        }
+        strong{
+			padding: 0.3rem;
+            display: block;
+            @include data-dpr("font-size",11);
 		}
 	}
 }
@@ -86,8 +100,5 @@
 	margin-top: 0.2rem;
 }
 
-.comtext{
-	@include data-dpr("font-size",14);
-	color: #333;
-}
+
 /*end wrap*/

@@ -29,11 +29,20 @@ iconList.eq(0).tap(function(){
 sidebarAs.eq(0).tap(function () {
     mask.hide();
 });
- //滑动sidebar，sidebar消失,zepto的swipe事件失效,未查找到解决办法
-/*document.addEventListener('touchmove', function (event) {
+ //滑动sidebar，sidebar消失,zepto的swipe事件失效,用原生的事件解决的，同时禁止默认行为，防止事件穿透
+sidebar.on('touchmove', function (event) {
     event.preventDefault();
-});*/
+    $(this).animate(
+        mask.hide(),
+        5000
+    );
+});
 /*图片懒加载*/
-
+window.onload = function(){
+    $(".dif-sections>li>a>img").lazyLoad();
+    window.onscroll = function () {
+        $(".dif-sections>li>a>img").lazyLoad();
+    }
+}
 
 
