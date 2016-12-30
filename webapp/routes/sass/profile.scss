@@ -64,6 +64,7 @@
         >p.more{
             overflow: visible;
             height: auto;
+			@include data-dpr("font-size",14);
         }
         strong{
 			padding: 0.3rem;
