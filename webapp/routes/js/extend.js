@@ -28,28 +28,5 @@ $.fn.lazyLoad = function () {
         getH(index);
     })
 };
-/*2、封装获取swipe的距离的组件*/
-var getSwipeDistance = function (options) {
-    var el = document.querySelectorAll(options);
-    el.forEach(function (value,index,array) {
-        value.addEventListener("touchstart",function (e) {
-            var startPosition, endPosition, deltaX, deltaY, moveLength;
-            var startTouch = e.touches[0];
-            startPosition = {
-                x: touch.pageX,
-                y: touch.pageY
-            };
-            value.addEventListener("touchmove",function (e) {
-                var endTouch = e.touches[0];
-                endPosition = {
-                    x: endTouch.pageX,
-                    y: endTouch.pageY
-                }
-                deltaX = endPosition.x - startPosition.x;
-                deltaY = endPosition.y - startPosition.y;
-            })
-        });
 
-    })
-}
 

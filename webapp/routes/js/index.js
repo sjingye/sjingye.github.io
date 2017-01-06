@@ -3,19 +3,66 @@
 let $navAs = $(".top nav a");
 let $cSecs = $(".wrap>div");
 let cSecs = document.querySelectorAll(".wrap>div");
+var eleIndex = 0;
     // 点击头部的导航切换不同的内容，同时改变nav下的样式
-$navAs.tap(function () {
+$navAs.on("touchend",function () {
     $navAs.removeClass("active");
     $(this).addClass("active");
-
+    eleIndex = $navAs.index($(this));
     $cSecs.removeClass("active");
-    $cSecs.eq($navAs.index($(this))).addClass("active");
+    $cSecs.eq(eleIndex).addClass("active");
 });
-$cSecs.swipe(function () {
-    console.log(1)
+    // 滑动不同的内容板块，切换不同的内容
+/*封装滑动函数*/
+var getSwipeDistance = function (selector) {
+    var el = document.querySelectorAll(selector);
+    var startPosition, endPosition, deltaX, deltaY, moveLength;
+    var activeEleIndex = eleIndex;
+    for (let i =0;i<el.length;i++){
+        el[i].addEventListener("touchstart",function (e) {
+            var startTouch = e.touches[0];
+            startPosition = {
+                x: startTouch.pageX,
+                y: startTouch.pageY
+            };
+        });
+        el[i].addEventListener("touchmove",function (e) {
+            var endTouch = e.touches[0];
+            endPosition = {
+                x: endTouch.pageX,
+                y: endTouch.pageY
+            };
+            deltaX = endPosition.x - startPosition.x;
+            deltaY = endPosition.y - startPosition.y;
+            moveLength = Math.sqrt(Math.pow(deltaX,2) + Math.pow(deltaY,2));
+            if( moveLength >= (window.innerWidth)*10/100){
+                if( deltaX>0 ){
+                    activeEleIndex++;
+                    if(activeEleIndex === el.length){
+                        activeEleIndex=0;
+                    }
+                }
+                else if( deltaX<0 ){
+                    activeEleIndex--;
+                    if(activeEleIndex<0){
+                        activeEleIndex=el.length-1;
+                    }
+                }
+            }
+        });
+        el[i].addEventListener("touchend",function() {
+            eleIndex = activeEleIndex;
+        });
+    };
+    $navAs.removeClass("active");
+    $navAs.eq(eleIndex).addClass("active");
+    $cSecs.removeClass("active");
+    $cSecs.eq(eleIndex).addClass("active");
+};
+getSwipeDistance(".wrap>div");
+$cSecs.on("swipe",function () {
+    getSwipeDistance(".wrap>div")
 });
-
-
     // 轮播图，幻灯片显示。使用了iswiper插件
 var mySwiper = new Swiper ('.swiper-container', {
     direction: 'horizontal',
