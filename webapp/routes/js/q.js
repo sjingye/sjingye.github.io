@@ -36,13 +36,13 @@ var swipeDivs = function (selector) {
             deltaY = endPosition.y - startPosition.y;
             moveLength = Math.sqrt(Math.pow(deltaX,2) + Math.pow(deltaY,2));
             if( moveLength >= (window.innerWidth)*10/100){
-                if( deltaX<0 ){
+                if( deltaX>0 ){
                     activeEleIndex++;
                     if(activeEleIndex === el.length){
                         activeEleIndex=0;
                     }
                 }
-                else if( deltaX>0 ){
+                else if( deltaX<0 ){
                     activeEleIndex--;
                     if(activeEleIndex<0){
                         activeEleIndex=el.length-1;
@@ -59,6 +59,7 @@ var swipeDivs = function (selector) {
     $cSecs.removeClass("active");
     $cSecs.eq(eleIndex).addClass("active");
 };
+swipeDivs(".wrap>div");
 $cSecs.on("swipe",function () {
     swipeDivs(".wrap>div");
 });
@@ -90,7 +91,7 @@ sidebar.on('touchmove', function (event) {
     );
 });
 //4.图片懒加载
-window.onload = function(){
+$( function(){
     //初始化
     $(".dif-sections>li>a>img").lazyLoad();
     $(".every-recom>li .bigp img").lazyLoad();
@@ -103,13 +104,10 @@ window.onload = function(){
         $(".every-recom>li .midp img").lazyLoad();
         $(".item-pic").lazyLoad();
     }
-};
+});
 //5.用户评论的左右滑屏切换显示
 let userCommentImgsUl = $(".friend-say div:first-child ul");
 let userCommentImgsImg = $(".friend-say div:first-child ul img");
-function getSwipeDistance(){
-    var 
-}
 userCommentImgsUl.swipe(function (event) {
     console.log(1)
     event.stopPropagation();

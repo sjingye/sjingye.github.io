@@ -258,25 +258,34 @@ dif-sections a {
 .friend-say{
 	width:9.2rem;
 	height:6rem;
-	padding:0 0.4rem;
-	padding-top: 0.826667rem;
-}
-.friend-say>div:first-child{
-	width:9.2rem;
-	height:1.6rem;
-	display:flex;
-	justify-content:space-around;
-	align-items:center;
-}
-.friend-say>div:first-child img{
-	width:1.066667rem;
-	height:1.066667rem;
-	border-radius: 50%;
-	-webkit-border-radius: 50%;
-}
-.friend-say>div:first-child img:nth-of-type(3){
-	width:1.6rem;
-	height:1.6rem;
+	padding:0.827rem 0.4rem 0;
+	>div:first-child{
+		width:9.2rem;
+		height:1.6rem;
+		overflow:hidden;
+		ul{
+            width:18rem;
+            height:1.6rem;
+            li{
+				width:1.6rem;
+				height:1.6rem;
+                float:left;
+				margin: 0 0.13rem;
+				img{
+                    width:1rem;
+                    height:1rem;
+                    margin: 0.3rem;
+                    border-radius: 50%;
+					-webkit-border-radius: 50%;
+					&.active{
+						width:1.6rem;
+						height:1.6rem;
+                        margin: 0rem;
+					}
+				}
+			}
+		}
+	}
 }
 .friend-say>p{
 	margin: 0.4rem auto 0;
