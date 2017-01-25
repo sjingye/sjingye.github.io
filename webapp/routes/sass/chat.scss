@@ -2,19 +2,25 @@
 @import "public";
 @import "reset";
 @import "globle";
+.top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
 .content{
-	width:10rem;
+    margin-top: 1.2rem;
+    width:10rem;
 	height: 17.786667rem;
 	position: relative;
 	overflow: hidden;
-	//background-color: #fafafa;
 	background-color: #fff;
 }
 .wrap{
 	width:10rem;
-	position: absolute;
+	/*position: absolute;
 	top:0;
-	left:0;
+	left:0;*/
 	>div{
 		margin-bottom: 0.4rem;
 	}
@@ -57,14 +63,16 @@
 	margin-right: 0;
 }
 .talk-time{
-	margin-top: 0.266667rem;
-	@include data-dpr("font-size",12);
-	color:#9da1a7;
+  margin-top: 0.266667rem;
+  @include data-dpr("font-size",12);
+  color:#9da1a7;
+  strong{
+    margin-right: 0.2rem;
+  }
 }
 .customer-talk .talk-time{
 	color:#97dcdb;
 }
-
 /*talk-box*/
 .talk-box{
 	border-top: 1px solid #dedede;
@@ -84,17 +92,18 @@
 	width: 0.426667rem;
 	height: 0.426667rem;
 	float:left;
-	/*background:url(../img/images/add.png) no-repeat;*/
+	background:url(../img/images/add.png) no-repeat;
 	background-size: contain;
 }
 .talk-box .input-talk{
-	width:6rem;
+	width:7rem;
 	height: 0.666667rem;
-	border-bottom: 1px solid #dedede;
+	border: 1px solid #dedede;
+	border-radius: size(8);
 	@include data-dpr("font-size",14);
 	padding:0.133333rem;
 	line-height: 1.4em;
-	margin:0 auto;
+	margin:0 0 0 0.5rem;
 	word-break: break-all; 
 }
 .talk-box  .send{

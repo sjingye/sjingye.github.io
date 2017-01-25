@@ -1,68 +1,70 @@
 // 1.入口动画效果
+/*$enter = $(".enter >ul");
+$enterLis = $(".enter >ul >li");
+$enter.animate({transform:'translateX(-3000px)'},12000,function () {
+    $(this).css('transform','translateX(0px)');
+});*/
 // 2.点击nav切换显示，左右滑动屏幕时切换显示
 let $navAs = $(".top nav a");
 let $cSecs = $(".wrap>div");
-let cSecs = document.querySelectorAll(".wrap>div");
 var eleIndex = 0;
-// 点击头部的导航切换不同的内容，同时改变nav下的样式
+    // 点击头部的导航切换不同的内容，同时改变nav下的样式
 $navAs.on("touchend",function () {
-    $navAs.removeClass("active");
-    $(this).addClass("active");
+    $(this).addClass("active").
+    siblings().removeClass("active");
     eleIndex = $navAs.index($(this));
-    $cSecs.removeClass("active");
-    $cSecs.eq(eleIndex).addClass("active");
+    $cSecs.eq(eleIndex).addClass("active").
+    siblings().removeClass("active");
 });
-// 滑动不同的内容板块，切换不同的内容
-/*封装滑动函数*/
-var swipeDivs = function (selector) {
-    var el = document.querySelectorAll(selector);
-    var startPosition, endPosition, deltaX, deltaY, moveLength;
-    var activeEleIndex = eleIndex;
-    for (let i =0;i<el.length;i++){
-        el[i].addEventListener("touchstart",function (e) {
-            var startTouch = e.touches[0];
-            startPosition = {
-                x: startTouch.pageX,
-                y: startTouch.pageY
-            };
-        });
-        el[i].addEventListener("touchmove",function (e) {
-            var endTouch = e.touches[0];
-            endPosition = {
-                x: endTouch.pageX,
-                y: endTouch.pageY
-            };
-            deltaX = endPosition.x - startPosition.x;
-            deltaY = endPosition.y - startPosition.y;
-            moveLength = Math.sqrt(Math.pow(deltaX,2) + Math.pow(deltaY,2));
-            if( moveLength >= (window.innerWidth)*10/100){
-                if( deltaX<0 ){
-                    activeEleIndex++;
-                    if(activeEleIndex === el.length){
-                        activeEleIndex=0;
+    // 滑动不同的内容板块，切换不同的内容
+    /*封装滑动函数*/
+    var swipeDivs = function (selector) {
+        var el = document.querySelectorAll(selector);
+        var startPosition, endPosition, deltaX, deltaY, moveLength;
+        var activeEleIndex = eleIndex;
+        for (let i =0;i<el.length;i++){
+            el[i].addEventListener("touchstart",function (e) {
+                var startTouch = e.touches[0];
+                startPosition = {
+                    x: startTouch.pageX,
+                    y: startTouch.pageY
+                };
+            });
+            el[i].addEventListener("touchmove",function (e) {
+                var endTouch = e.touches[0];
+                endPosition = {
+                    x: endTouch.pageX,
+                    y: endTouch.pageY
+                };
+                deltaX = endPosition.x - startPosition.x;
+                deltaY = endPosition.y - startPosition.y;
+                moveLength = Math.sqrt(Math.pow(deltaX,2) + Math.pow(deltaY,2));
+                if( moveLength >= (window.innerWidth)*10/100){
+                    if( deltaX<0 ){
+                        activeEleIndex++;
+                        if(activeEleIndex === el.length){
+                            activeEleIndex=0;
+                        }
+                    }
+                    else if( deltaX>0 ){
+                        activeEleIndex--;
+                        if(activeEleIndex<0){
+                            activeEleIndex=el.length-1;
+                        }
                     }
                 }
-                else if( deltaX>0 ){
-                    activeEleIndex--;
-                    if(activeEleIndex<0){
-                        activeEleIndex=el.length-1;
-                    }
-                }
-            }
-        });
-        el[i].addEventListener("touchend",function() {
-            eleIndex = activeEleIndex;
-        });
+            });
+            el[i].addEventListener("touchend",function() {
+                eleIndex = activeEleIndex;
+            });
+        };
+        $navAs.removeClass("active").eq(eleIndex).addClass("active");
+        $cSecs.removeClass("active").eq(eleIndex).addClass("active");
     };
-    $navAs.removeClass("active");
-    $navAs.eq(eleIndex).addClass("active");
-    $cSecs.removeClass("active");
-    $cSecs.eq(eleIndex).addClass("active");
-};
 $cSecs.on("swipe",function () {
     swipeDivs(".wrap>div");
 });
-// 轮播图，幻灯片显示。使用了iswiper插件
+    // 轮播图，幻灯片显示,使用了iswiper插件
 var mySwiper = new Swiper ('.swiper-container', {
     direction: 'horizontal',
     autoplay:3000,
@@ -90,7 +92,7 @@ sidebar.on('touchmove', function (event) {
     );
 });
 //4.图片懒加载
-window.onload = function(){
+$(function(){
     //初始化
     $(".dif-sections>li>a>img").lazyLoad();
     $(".every-recom>li .bigp img").lazyLoad();
@@ -103,17 +105,15 @@ window.onload = function(){
         $(".every-recom>li .midp img").lazyLoad();
         $(".item-pic").lazyLoad();
     }
-};
+});
 //5.用户评论的左右滑屏切换显示
 let userCommentImgsUl = $(".friend-say div:first-child ul");
-let userCommentImgsImg = $(".friend-say div:first-child ul img");
+let userCommentImgsImg = $(".friend-say div:first-child ul li");
 function getSwipeDistance(){
-    var 
 }
 userCommentImgsUl.swipe(function (event) {
-    console.log(1)
     event.stopPropagation();
-})
+});
 
 
 

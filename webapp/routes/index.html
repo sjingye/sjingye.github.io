@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <script src="./lib/flexible/build/flexible.js"></script>
-    <script src="./lib/zepto/src/zepto.min.js"></script>
     <!--<script src="./lib/jquery-2.1.4/jquery.min.js"></script>-->
+    <script src="./lib/zepto/src/zepto.min.js"></script>
     <script src="./lib/zepto/src/event.js"></script>
     <script src="./lib/zepto/src/touch.js"></script>
     <script src="./lib/swiper-3.4.1.jquery.min.js"></script>
@@ -13,8 +13,8 @@
     <title>index</title>
 </head>
 <body>
- <!-- 头部-->
  <section class="content">
+     <!-- 头部-->
      <section class = "top">
          <div class="top-label">
              <a class="icon-list">
@@ -26,12 +26,13 @@
              </a>
          </div>
          <nav>
-             <a  class="active">热门推荐</a>
-             <a>友邻热选</a>
-             <a>个人专属</a>
+             <a  class="active" href="#popular-recommand">热门推荐</a>
+             <a href="#friend-like">友邻热选</a>
+             <a href="#for-you">个人专属</a>
          </nav>
      </section>
      <!-- end 头部-->
+
      <!-- 主体部分 -->
      <section class ="wrap">
          <div id="popular-recommand"  class="active">
@@ -53,13 +54,6 @@
                          <img src="img/banner5.png" alt="">
                      </div>
                  </div>
-                 <!--<ul class="symbol clearfix">
-                     <li></li>
-                     <li></li>
-                     <li></li>
-                     <li></li>
-                     <li></li>
-                 </ul>-->
              </div>
              <ul class="dif-sections">
                  <li >
@@ -759,8 +753,8 @@
                  </div>
              </div>
          </div>
-
      </section> <!-- end 主体部分 -->
+
      <section class="mask">
          <div class="mask-up"></div>
          <ul class="sidebar">
@@ -780,7 +774,7 @@
                  </a>
              </li>
              <li>
-                 <a class="remind" href="Chat.html">
+                 <a class="remind" href="chat.html">
                      <img src="img/images/remind.png">
                  </a>
              </li>
@@ -801,32 +795,32 @@
  <section class="enter">
      <ul>
          <li>
-             <img src="img/enter1.jpg" alt="">
+             <img src="./img/enter1.jpg" alt="">
+             <img src="" alt="">
+             <img src="" alt="">
+         </li>
+         <li>
+             <img src="./img/enter2.jpg" alt="">
              <img src="" alt="">
              <img src="" alt="">
              <div class="active"></div>
+         </li>
          <li>
-         <li>
-             <img src="img/enter2.jpg" alt="">
+             <img src="./img/enter3.jpg" alt="">
              <img src="" alt="">
              <img src="" alt="">
              <div class="active"></div>
+         </li>
          <li>
-         <li>
-             <img src="img/enter3.jpg" alt="">
+             <img src="./img/enter4.jpg" alt="">
              <img src="" alt="">
              <img src="" alt="">
              <div class="active"></div>
-         <li>
-         <li>
-             <img src="img/enter4.jpg" alt="">
-             <img src="" alt="">
-             <img src="" alt="">
-             <div class="active"></div>
-         <li>
+         </li>
      </ul>
- <p>开始您的旅行</p>
+    <p>开始您的旅行</p>
  </section>
+
  <script type="text/javascript" src="./js/data.js"></script>
  <script type="text/javascript" src="./js/extend.js"></script>
  <script type="text/javascript" src="./js/index.js"></script>

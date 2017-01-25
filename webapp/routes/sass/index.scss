@@ -2,16 +2,17 @@
 @import "public";
 @import "reset";
 @import "globle";
+
 //1.入场动画
 .enter{
 	width: 10rem;
 	height: 100%;
-	background-color: red;
+	background-color: transparent;
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: -750px;
 	z-index: 3;
-	overflow: hidden;
+	//overflow: hidden;
 	display: none;
 	ul{
 		width: 40rem;
