@@ -6,7 +6,7 @@
     <script src="./lib/zepto/src/zepto.min.js"></script>
     <script src="./lib/zepto/src/event.js"></script>
     <script src="./lib/zepto/src/touch.js"></script>
-    <link rel="stylesheet" href="./css/HotelPage.css" />
+    <link rel="stylesheet" href="./dist/css/HotelPage.css" />
     <title>HotelPage</title>
 </head>
 <body>
@@ -15,23 +15,20 @@
     <div class="top-mask"></div>
     <div class="top-label">
         <a class="prev" href="index.html">
-            <img src="img/images/back.png">
+            <img src="./img/images/back.png">
         </a>
     </div>
 </div>
-
- <!-- end 头部-->
-
 <!-- 主体部分 -->
 <div class ="wrap">
 	<div class="hotel-info">
         <div class="like-act">
-            <img src="img/images/xin.png">
+            <img src="./img/images/xin.png">
         </div>
         <h1>香山酒店</h1>
         <h3>北京市海淀区海淀路33号</h3>
         <p class="icon-nolike-1">
-            <img src="img/images/no-like-1.png">
+            <img src="./img/images/no-like-1.png">
             <em>9.2</em>
         </p>
     </div>
@@ -41,7 +38,7 @@
         <p>
             这种浓郁的味道真不可思议，和极有嚼劲的面搭配起来，让人不禁想要一口接一口...这是我第一次吃到这种味道，这碗面有着前所未有的新鲜味，温润的甜味，让整碗面更显出奥妙....
         </p>
-        <ul class="hotel-service">
+        <ul class="hotel-service clearfix">
             <li>
                 <img class="icon-wifi" src="img/images/wifi-1.png">
                 <p>WIFI</p>
@@ -64,49 +61,65 @@
             </li>
         </ul>
     </div>
-    <ul class="service-info">
-        <li class="active">
-            <p class="wifi-info">而当我和朋友终于抵达东京，躺在酒店的床上，给自己煮上咖啡和新买的抹茶，摊了一床的地图、杂志、旅行宣传。自己煮上咖啡和新买的抹茶，摊了一床的地图、杂志、旅行宣传.
-            </p>
-            <p class="price">
-                <strong>$60</strong>
-                <span>每晚</span>
-            </p>
-        </li>
-         <li>
-            <p class="eat-info">而当我和朋友终于抵达东京，躺在酒店的床上，给自己煮上咖啡和新买的抹茶，摊了一床的地图、杂志、旅行宣传。</p>
-            <p class="price">
-                <strong>$60</strong>
-                <span>每餐</span>
-            </p>
-        </li>
-        <li>
-            <p class="dinner-info">而当我和朋友终于抵达东京，躺在酒店的床上，给自己煮上咖啡和新买的抹茶，摊了一床的地图、杂志、旅行宣传。</p>
-            <p class="price">
-                <strong>$60</strong>
-                <span>每小时</span>
-            </p>
-        </li>
-         <li>
-            <p class="spring-info">而当我和朋友终于抵达东京，躺在酒店的床上，给自己煮上咖啡和新买的抹茶，摊了一床的地图、杂志、旅行宣传。</p>
-            <p class="price">
-                <strong>$60</strong>
-                <span>每小时</span>
-            </p>
-        </li>
+    <div class="service-info">
+        <p class="info">而当我和朋友终于抵达东京，躺在酒店的床上，给自己煮上咖啡和新买的抹茶，摊了一床的地图、杂志、旅行宣传。自己煮上咖啡和新买的抹茶，摊了一床的地图、杂志、旅行宣传.
+        </p>
+        <p class="price">
+            $60
+        </p>
     </ul>
     <div class="map">
-        <img class="icon-location" src="img/images/location.png">
+        <img class="icon-location" src="./img/images/location.png">
     </div>
+    <!--评论-->
     <div class="reviews">
         <h2>评论</h2>
-        <p>
-            优质的服务，温润的甜味，让整碗面更显出奥妙....
-            优质的服务，温润的甜味，让整碗面更显出奥妙....
-        </p>
         <p class="like-bzz">
             <img src="img/images/like.png" class="fl">
             <em class="fl">9.2</em>
+        </p>
+        <ul class="dif-items">
+            <li>
+                <p>清洁</p>
+                <div class="chart">
+                    <div class="back">
+                        <div class="upper clean-chart"></div>
+                    </div>
+                    <span>9.0</span>
+                </div>
+            </li>
+            <li>
+                <p>舒适</p>
+                <div class="chart">
+                    <div class="back">
+                        <div class="upper  comfort-chart"></div>
+                    </div>
+                    <span>9.3</span>
+                </div>
+            </li>
+            <li>
+                <p>位置</p>
+                <div class="chart">
+                    <div class="back">
+                        <div class="upper location-chart"></div>
+                    </div>
+                    <span>6.8</span>
+                </div>
+            </li>
+            <li>
+                <p>性价比</p>
+                <div class="chart">
+                    <div class="back">
+                        <div class="upper quality-chart"></div>
+                    </div>
+                    <span>5.5</span>
+                </div>
+            </li>
+        </ul>
+        <p class="reviews-text">
+            优质的服务，温润的甜味，让整碗面更显出奥妙....
+            优质的服务，温润的甜味，让整碗面更显出奥妙....
+            优质的服务，温润的甜味，让整碗面更显出奥妙....
         </p>
     </div>
     <div class="rooms">
@@ -160,7 +173,7 @@
     </div>
     <!-- 下单 -->
     <a class="book" href="filter.html">预定房间</a>
-    <!-- end wrap -->
-<script src="js/Hotel page.js"></script>
+<!--<script src="./dist/js/extend.js"></script>
+<script src="./dist/js/Hotel page.js"></script>-->
 </body>
 </html>

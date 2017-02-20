@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务十七：零基础JavaScript编码（五）</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<div class="wrap">
+    <fieldset id="form-gra">
+        <legend>请选择日期粒度及城市：</legend>
+            <form action="#">
+                <label>
+                    日
+                    <input name="gra-time" value="day" type="radio" checked="checked">
+                </label>
+                <label>
+                    周
+                    <input name="gra-time" value="week" type="radio">
+                </label>
+                <label>
+                    月
+                    <input name="gra-time" value="month" type="radio">
+                </label>
+            </form>
+            <select id="city-select">
+
+            </select>
+    </fieldset>
+    <div class="aqi-chart-wrap">
+        <h3>
+            <span></span>
+            市01-03月
+            <em></em>
+            平均空气质量报告
+        </h3>
+        <ul class="aqi-chart-table">
+        </ul>
+    </div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+.top {
+  height: 1.173333rem;
+  width: 10rem;
+  background: #2b3139; }
+
+.top-label {
+  margin: 0 0.133333rem;
+  position: relative; }
+  .top-label h2 {
+    height: 1.173333rem;
+    line-height: 1.173333rem;
+    color: #fff;
+    font-weight: normal;
+    text-align: center; }
+    [data-dpr="1"] .top-label h2 {
+      font-size: 16px; }
+    [data-dpr="2"] .top-label h2 {
+      font-size: 32px; }
+    [data-dpr="3"] .top-label h2 {
+      font-size: 48px; }
+  .top-label a {
+    position: absolute;
+    display: block;
+    color: #b3bdc2; }
+
+.prev {
+  display: block;
+  width: 0.24rem;
+  height: 0.413333rem;
+  left: 0.133333rem;
+  bottom: 0.4rem; }
+  .prev img {
+    width: 0.3rem; }
+
+.comment {
+  width: 9.2rem;
+  margin: 0 0.4rem;
+  padding-top: 0.8rem; }
+  .comment li {
+    border-bottom: 1px solid #dedede;
+    padding-bottom: 0.666667rem; }
+
+.head span {
+  color: #3c4350;
+  font-size: 16px; }
+
+.head em {
+  color: #b7ce63;
+  font-size: 18px; }
+
+.write-time {
+  font-size: 14px;
+  color: #9da1a7;
+  margin: 0.32rem 0 0.6rem; }
+
+.comment .comtext {
+  color: #696d6f;
+  font-size: 14px;
+  line-height: 1.6em;
+  margin-bottom: 0.533333rem; }

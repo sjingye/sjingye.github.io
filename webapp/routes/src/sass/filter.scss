@@ -1,0 +1,90 @@
+@import "mixin";
+@import "public";
+@import "reset";
+@import "globle";
+body{
+	background-color: #191f28;
+	width: 10rem;
+}
+.week{
+	height:1.3rem;
+	line-height: 1.3rem;
+	display: flex;
+	align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #666;
+    color:#f5f5f5;
+    @include data-dpr("font-size",16);
+    li{
+        flex-grow:1;
+    }
+    .weekend{
+        color:#06bebd;
+    }
+}
+.calendar{
+    width: 10rem;
+	box-sizing: border-box;
+	padding: .2rem .5rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+	h4{
+		color: #eee;
+		@include data-dpr("font-size",16);
+		font-weight: normal;
+		line-height: size(70);
+		height: size(70);
+	}
+    ul{
+        margin-bottom: size(20);
+		li{
+			float: left;
+			text-align: center;
+			width: 1rem;
+			height: 1rem;
+			line-height: 1rem;
+			margin: 0.1428rem;
+			border-radius: 50%;
+			display: block;
+			list-style: none;
+			color:#ccc;
+			@include data-dpr("font-size",15);
+			&.past{
+				color:#999;
+			}
+			&.active{
+				color:#fff;
+				background-color: #06bebd;
+			}
+		}
+
+    }
+}
+.wrap>p{
+	width:4.88rem;
+	margin:0 auto;
+	text-align: center;
+}
+.choose-date{
+	margin: .2rem auto 0.44rem;
+	color:#f5f5f5;
+	@include data-dpr("font-size",18);
+	word-spacing: 10px;
+	line-height: 1.4em;
+}
+.wrap .total-days{
+	margin: 0.4rem auto ;
+	color:#b3bdc2;
+	@include data-dpr("font-size",16);
+}
+.wrap .apply{
+	height:1.733333rem;
+	line-height: 1.733333rem;
+	margin: .8rem auto;
+	text-align: center;
+	@include data-dpr("font-size",18);
+	color:#fff;
+	background-color: #06bebd;
+	border-radius: 0.826667rem;
+}

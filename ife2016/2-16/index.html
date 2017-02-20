@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>零基础JavaScript编码（四）</title>
+    <style>
+        /*reset css*/
+        label{
+            margin: 0;
+            padding: 0;
+        }
+        input{
+            outline: none;
+            resize: none;
+        }
+        label{
+            margin-bottom: 5px;
+            display: block;
+        }
+        input[type="text"]{
+            text-indent: 0.5em;
+            font-size: 14px;
+        }
+        #aqi-table{
+            margin-top: 30px;
+            border: 1px solid #666;
+        }
+        thead{
+            background-color: #999999;
+        }
+        tbody tr{
+            background-color: #eee;
+        }
+        #aqi-table td, #aqi-table th{
+            padding: 8px 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <label>
+        城市名称：
+        <input id="aqi-city-input" type="text" pattern="/^[\u4e00-\u9fa5a-zA-Z]+$/" placeholder="请输入城市名称">
+    </label>
+    <br>
+    <label>空气质量指数：
+        <input id="aqi-value-input" type="text" pattern="/^\d+$/" placeholder="请输入空气质量指数">
+    </label>
+    <br>
+    <button id="add-btn">确认添加</button>
+</div>
+<table id="aqi-table">
+    <thead class="thead">
+          <th>城市</th>
+          <th>空气质量</th>
+          <th>操作</th>
+    </thead>
+    <tbody>
+        <!-- <tr>
+        <td>北京</td>
+        <td>90</td>
+        <td>
+          <button>删除</button>
+        </td>
+        </tr>-->
+    </tbody>
+
+</table>
+<script src="./index.js"></script>
+</body>
+</html>

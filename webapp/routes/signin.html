@@ -6,7 +6,7 @@
     <script src="./lib/zepto/src/zepto.min.js"></script>
     <script src="./lib/zepto/src/event.js"></script>
     <script src="./lib/zepto/src/touch.js"></script>
-    <link rel="stylesheet" href="./css/signin.css" />
+    <link rel="stylesheet" href="./dist/css/signin.css"/>
     <title>signin</title>
 </head>
 <body>
@@ -15,18 +15,44 @@
 	<img src="img/images/signin.png" class="signin">
 	<h3>创建账户</h3>
     <p class="note">
-        简单几步，轻松预定。希望你能喜欢Routes
+        简单几步，轻松预定。希望你能喜欢Routes！
     </p>
-	<label>
-        <input type="text" name="user-name" placeholder="用户名">  
-        <input type="text" name="email" placeholder="邮箱/手机号"> 
-        <input type="text" name="email" placeholder="密码"> 
-    </label>
+    <form action="#">
+        <table>
+            <tr>
+                <td>
+                    <input type="text" name="user-name" placeholder="用户名" id="t0">
+                </td>
+                
+            </tr>
+            <tr>
+                <td id="h0"  class="remind"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="email" placeholder="邮箱/手机号" id="t1">
+                </td>
+            </tr>
+            <tr>
+               <td id="h1"  class="remind"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="email" placeholder="密码" id="t2">
+                </td>
+            </tr>
+            <tr>
+                <td id="h2"  class="remind"></td>
+            </tr>
+        </table>
+    </form>
+    <p class="finalMessage"></p>
     <p class="create-account">创建账户</p>
     <p class="note-more">
         已经有账户？
         <a>登录</a>
     </p>
-</div>    
+</div>  
+<script src="./dist/js/signin.js"></script>  
 </body>
 </html>

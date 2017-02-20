@@ -6,7 +6,6 @@ class timePicker{
     	this.date = new Date();
     	this.choosedEle = null;
     };
-
     init(){
         for(let i=0;i<42;i++){
             let ele = $("<li></li>");
@@ -79,10 +78,8 @@ class timePicker{
         this.choosedEle.removeClass("active");
         if( date.getMonth()=== this.date.getMonth()){
             let index = $lis.index(this.choosedEle);
-            console.log(index+date.getDate()-this.date.getDate())
             this.choosedEle = $lis.eq(index+date.getDate()-this.date.getDate());
             this.choosedEle.addClass("active");
-            // console.log(this.choosedEle.html());
         }
         else{
             this.renderByDate(date);

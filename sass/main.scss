@@ -23,10 +23,18 @@ img {
 }
 a{
   text-decoration: none;
+  color: #fff;
   &:hover,&:active{
     outline: none
   }
 }
+h4{
+    font-weight: normal;
+}
+span{
+   font-weight: normal;
+}
+/* 通用样式 */
 .clear{
     zoom: 1;
 }
@@ -44,7 +52,15 @@ a{
     display: table-cell;
     vertical-align: middle;
 }
-
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+.overflow-hidden{
+    overflow: hidden;
+}
 /* reset end */
 
 /*structure begin*/
@@ -83,7 +99,7 @@ button.navbar-toggle {
   overflow: hidden;
   background-size: cover;
   background-position: center center;
-  background-image: url(../img/main.jpg);
+  background-image: url(../img/284341.jpg);
 }
 /*background-page end*/
 /*fullpage begin*/
@@ -106,81 +122,101 @@ button.navbar-toggle {
         height: 2px;
         background-color: $main-color;
         border: none !important;
+        margin: 10px auto;
     }
     P{
         color: #eee;
     }
 }
-.secContent{
-    padding-top: 40px;
-}
-/*section通用*/
-/*section-0 begin*/
-.section0{
-    .sec-left{
-        margin-right: 30px;
-    }
-    .sec-right{
-        margin-left: 30px;
-    }
-   /* .sec-middle>article{
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        background-color: $main-color;
-        opacity: .3;
-    }*/
-    .icon-box{
-        display: table;
-        margin-bottom: 30px;
-        h6,p,a{
-            margin-right:20px;
-            display: block;
-        }
-        h6{
-            color: #dcdcdc;
-            font-weight: 600;
-        }
-        p,a{
-            font-size: 16px;
-            color: #f5f5f5;
-        }
-    }
-    .sec-right{
-        .icon-box{
-            a,h6,p{
-                margin-left:20px;
-            }
-        }
-    }
-}
-.icon-box i.circle{
+/*section0*/
+.text-m.circle{
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: center;
     border: 1px solid $main-color;
     color: #eee;
     transition: background-color .3s;
 }
-.text-m.circle{
-    width: 58px;
-    height: 58px;
-    padding: 0;
-    line-height: 58px;
-    font-size: 20px;
-    text-align: center;
+.well{
+    box-shadow: none;
+    overflow: hidden;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    background-color: transparent;
+    border: 1px solid #999;
+    h4{
+        margin-bottom: 10px;
+    }
+    .college{
+        margin: 0 10px;
+    }
 }
 /*section-0 end*/
 /*section-1 begin*/
 .section1{
     .secContent{
-        //margin-top: 20px;
-        h4{
-            color: $main-color;
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-        p{
-            color: $main-color-font-p;
-            font-size: 16px;
-            margin-bottom: 20px;
+        // padding-top: 0px;
+        margin-top: 0 !important;
+        article{
+            color:#000;
+            perspective:1000;
+            transform-style:preserve-3d;
+            &:hover .flip{
+                transform:rotateY(180deg);
+            }
+            .flip{
+                position: relative;
+                transition:0.6s;
+                transform-style:preserve-3d;
+                margin:8px 0px;
+                border-radius:6px;
+                background: rgba(255,255,255,0.3);
+                >div{
+                    position:absolute;
+                    top: 0px;
+                    left: 0px;
+                    backface-visibility:hidden;
+                    width:100%;
+                    height:100%;
+                }
+                .front{
+                    z-index:2;
+                }
+                .back{
+                    transform:rotateY(-180deg);
+                    color: #fafafa;
+                    font-size: 14px;
+                    line-height: 1.4em;
+                    p{
+                        margin: 4px;
+                    }
+                }
+                h4{
+                    color: #fff;
+                    font-size: 16px;
+                    margin: 6px;
+                }
+                ul{
+                    @include data-dpr("font-size",12)
+                    li{
+                        background-color: rgba(255,255,255,0.6);
+                        width: 80%;
+                        margin: 10% auto;
+                        padding:0 2px;
+                        border-radius: 6px;
+                    }
+                }
+            }
+            &.col-sm-3  .flip{
+                min-height: 220px;
+            }
+            &.col-xs-6  .flip{
+                min-height: 190px;
+            }
         }
     }
 }
@@ -275,3 +311,7 @@ button.navbar-toggle {
 
 /*structure end*/
 
+.self-introduction{
+    margin: 20px;
+    color: #eee;
+}

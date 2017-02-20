@@ -1,0 +1,47 @@
+$border: #999;
+$bg: #eee;
+$dis: 10px;
+$h: 50px;
+@mixin generateGrid($tag) {
+    @for $i from 1 through 12{
+        .col-#{$tag}-#{$i} {
+            width: (100%/12)*$i;
+        }
+    }
+}
+@media(min-width:769px){
+    @include generateGrid("md");
+}
+@media(max-width:768px){
+    @include generateGrid("sm");
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.clearfix:after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.wrap{
+    width: 100%;
+    padding-top: $dis;
+}
+.row{
+   width: 100%;
+    padding: 0 $dis;
+}
+.row>div{
+    float: left;
+    margin: 10px 0px;
+}
+.inner{
+    height: $h;
+    margin: 0 $dis;
+    background-color: $bg;
+    border: 1px solid $border;
+}
