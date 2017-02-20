@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2-30</title>
+    <link rel="stylesheet" href="./src/css/index.css">
+</head>
+<body>
+<form action="#">
+    <table>
+        <tr>
+            <td>
+                <label for="t0">名称</label>
+            </td>
+            <td>
+                <input type="text" id="t0" minlength="4" maxlength="16"/>
+            </td>
+        </tr>
+        <tr class="remind">
+            <td></td>
+            <td id="h0">必填，长度为4~16位字符</td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="t1">密码</label>
+            </td>
+            <td>
+                <input type="text" id="t1"/>
+            </td>
+        </tr>
+        <tr class="remind">
+            <td></td>
+            <td id="h1">必填，长度为4~16位字符,包含字母和数字</td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="t2">密码确认</label>
+            </td>
+            <td>
+                <input type="text" id="t2"/>
+            </td>
+        </tr>
+        <tr class="remind">
+            <td></td>
+            <td id="h2">必填，必须与上面密码相同</td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="t3">邮箱</label>
+            </td>
+            <td>
+                <input type="text" id="t3"/>
+            </td>
+        </tr>
+        <tr class="remind">
+            <td></td>
+            <td id="h3">填写正确的邮箱格式</td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="t4">手机</label>
+            </td>
+            <td>
+                <input type="text" id="t4"/>
+            </td>
+        </tr>
+        <tr class="remind">
+            <td></td>
+            <td id="h4">必填，长度为4~16位字符</td>
+        </tr>
+    </table>
+    <button type="submit">提交</button>
+</form>
+<script src="./dist/index.js"></script>
+</body>
+</html>

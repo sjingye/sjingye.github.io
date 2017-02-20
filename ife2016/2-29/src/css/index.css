@@ -1,0 +1,46 @@
+input{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+button{
+    border: none;
+}
+form{
+    min-width: 250px;
+    height: 36px;
+    line-height: 36px;
+}
+form label{
+    font-size: 14px;
+    color: #0d0d0d;
+}
+#text{
+    border: 1px solid #666;
+    border-radius: 6px;
+    outline: none;
+    min-width: 250px;
+    height: 36px;
+    text-indent: 4px;
+}
+#text.wrong{
+    border: 1px solid #ff5638;
+}
+#text.right{
+    border: 1px solid #459d46;
+}
+button{
+    width: 80px;
+    height: 36px;
+    background-color: #00b3ee;
+    border-radius: 6px;
+}
+p{
+   color: #999;
+}
+p.wrong{
+    color: #ff5638;
+}
+p.right{
+    color: #459d46;
+}

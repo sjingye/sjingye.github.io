@@ -1,0 +1,83 @@
+@import "mixin";
+@import "public";
+@import "reset";
+@import "globle";
+.wrap{
+    width:10rem;
+    height: 17.786667rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+.signin{
+    width:1.733333rem;
+    height: 1.733333rem;
+    margin: 1.466667rem auto 0;
+}
+.wrap h3{
+	@include data-dpr("font-size",18);
+	color:#040a0e;
+	margin:0.8rem 0 0.4rem;
+}
+.note{
+	@include data-dpr("font-size",12);
+	color:#06090e;
+}
+form{
+	margin: size(40) 0;
+	height: size(480);
+	color:#06090e;
+}
+table tr:nth-of-type(even) td{
+	@include data-dpr("font-size",14);
+}
+td{
+	padding: size(10);
+}
+.remind{
+	width: 5rem;
+	color: #666;
+	@include data-dpr("font-size",14);
+}
+input{
+	display: block;
+	color: #3c4350;
+	@include data-dpr("font-size",14);
+	width: 5rem;
+	height: 1.33rem;
+	line-height: 1.33rem;
+	background: #dadada;
+	border-radius: size(16);
+	border: 1px solid #eee;
+	outline: none;
+	text-indent: 10px;
+}
+.create-account{
+	margin-top: 0.6rem;
+	width: 6.666667rem;
+	height: 1.733333rem;
+	line-height: 1.733333rem;
+	@include data-dpr("font-size",18);
+	color:#fff;
+	background-color: #06bebd;
+	text-align:center;
+	border-radius: size(100);
+}
+.note-more{
+	text-align: center;
+	color:#919499;
+	@include data-dpr("font-size",14);
+	margin-top: 0.5rem;
+}
+.note-more a{
+	color: #06bebd;
+}
+.finalMessage{
+	margin: .6rem  auto 0;
+	@include data-dpr("font-size",14);
+	color: #333;
+}
+
+
+

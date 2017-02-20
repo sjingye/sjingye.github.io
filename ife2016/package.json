@@ -1,0 +1,19 @@
+{
+  "name": "2-30",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjingye/IFE-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sjingye/IFE-practice/issues"
+  },
+  "homepage": "https://github.com/sjingye/IFE-practice#readme"
+}

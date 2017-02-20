@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="./lib/flexible/build/flexible.js"></script>
+    <script src="./lib/zepto/src/zepto.min.js"></script>
+    <script src="./lib/zepto/src/event.js"></script>
+    <script src="./lib/zepto/src/touch.js"></script>
+    <link rel="stylesheet" href="./dist/css/filter.css" />
+    <title>filter</title>
+</head>
+<body>
+ <!-- 头部-->
+<div class = "top">
+    <div class="top-label">
+        <a class="prev">
+            <img src="img/images/back.png">
+        </a>
+        <h2>选择日期</h2>
+    </div>
+</div>
+<!-- 主体部分 -->
+<div class ="wrap">
+    <!--显示星期部分-->
+    <ul class="week">
+        <li class="weekend">日</li>
+        <li>一</li>
+        <li>二</li>
+        <li>三</li>
+        <li>四</li>
+        <li>五</li>
+        <li class="weekend">六</li>
+    </ul>
+    <!--日历部分-->
+    <div class="calendar">
+        <div>
+            <h4 class="choosed-time"></h4>
+            <ul class="clearfix"></ul>
+        </div>
+        <div>
+            <h4 class="choosed-time"></h4>
+            <ul class="clearfix"></ul>
+        </div>
+        <div>
+            <h4 class="choosed-time"></h4>
+            <ul class="clearfix"></ul>
+        </div>
+    </div>
+    <!--选择日期-->
+    <p class="choose-date">
+        <strong class="prev-month"></strong>
+        .
+        <span class="prev-date"></span>
+        <em>-</em>
+        <strong class="next-month"></strong>
+        .
+        <span class="next-date"></span>
+    </p>
+    <p class="total-days">
+        0夜
+    </p>
+    <p class="apply">下单</p>
+<script src="./dist/js/filter.js"></script>
+</div>
+</body>
+</html>
