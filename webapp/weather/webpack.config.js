@@ -3,7 +3,7 @@ module.exports = {
     entry: "./src/entry.js",
     //编译后的输出配置
     output: {
-        //输出目录 E:\miaov\2016\11\2016-11-7\2\test/dist
+        //输出目录 E:\2016\11\2016-11-7\2\test/dist
         path: __dirname + '/dist',
         //输出文件
         filename: "bundle.js"

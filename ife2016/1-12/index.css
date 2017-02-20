@@ -1,0 +1,65 @@
+body,table,tbody,tr,th,td{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Microsoft Yahei";
+    padding: 20px 100px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+thead tr{
+    color: #fff;
+    background: #333333;
+    text-align: center;
+    font-size: 16px;
+    ling-height: 1.6em;
+    height: 1.6em;
+}
+thead th{
+    padding: 8px 15px;
+}
+tbody tr{
+    text-align: center;
+    height: 1.8em;
+    line-height: 1.8em;
+    font-size: 14px;
+}
+tbody tr td{
+    padding: 6px 15px;
+}
+tbody tr:nth-of-type(odd){
+    background-color: #d7d7d7;
+}
+tbody tr:nth-of-type(even){
+    background-color: #8a8a8a;
+}
+tbody tr:nth-of-type(-n+3){
+    color: red;
+}
+input{
+    margin-top: 30px;
+    font-size: 14px;
+    line-height: 1.5em;
+    height: 1.5em;
+    text-indent: 1em;
+    width:120px;
+    outline: none;
+    transition: 0.5s width;
+}
+input:focus{
+    width: 240px;
+}
+/*input:hover{
+    animation: changeWidth 0.5s ease;
+}
+@keyframes changeWidth {
+    from{
+        width: 120px
+    }
+    to{
+        width: 240px;
+    }
+}*/
+

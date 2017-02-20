@@ -1,0 +1,23 @@
+#inp{
+    margin-right: 40px;
+}
+button{
+    margin: 10px;
+}
+.wrap{
+    margin-top: 60px;xs
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+.wrap li{
+    list-style: none;
+    width: 40px;
+    background-color: #FA8072;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}

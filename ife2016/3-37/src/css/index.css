@@ -1,0 +1,104 @@
+/*reset默认样式*/
+body,ul,p{
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    line-height: 50px;
+}
+button{
+    border: 0;
+    padding: 0;
+
+}
+/*样式*/
+body{
+    width: 100%;
+    min-height: 2000px;
+}
+header{
+    width: 100%;
+    height: 50px;
+    background-color: #007d60;
+}
+header ul{
+    width: 80%;
+    height: 50px;
+    margin: 0 10%;
+    overflow: hidden;
+}
+header ul li{
+    float: left;
+    width: 100px;
+    height: 50px;
+}
+header ul a{
+    display: block;
+    width: 100px;
+    height: 50px;
+}
+.wrap >ul{
+    margin-top: 50px;
+}
+.wrap >ul li{
+    height: 40px;
+    line-height: 40px;
+}
+.mask{
+    width:  100%;
+    min-height: 2000px;
+    background-color: black;
+    opacity: .4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-inde: 3;
+}
+.login-box{
+    width: 260px;
+    height: 180px;
+    padding: 20px;
+    border: 1px solid #999;
+    border-radius: 10px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -90px;
+    background-color: #fff;
+    display: none;
+    z-inde: 4;
+}
+.login-box-body input,.login-box-body button{
+    display: block;
+    margin: 16px auto;
+    width: 200px;
+    height: 28px;
+    border: 1px solid #888;
+    text-indent: 6px;
+    border-radius: 6px;
+}
+.login-box-body button{
+    border: 0;
+    color: #fff;
+    background-color: #0275d8;
+}
+.login-box-header p,.login-box-header button{
+    display: inline-block;
+}
+.login-box-header{
+    overflow: hidden;
+    height: 40px;
+    line-height: 40px;
+}
+.login-box-header button{
+    width: 40px;
+    height: 40px;
+    float: right;
+}

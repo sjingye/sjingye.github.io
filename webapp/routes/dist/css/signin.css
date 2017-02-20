@@ -1,0 +1,236 @@
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+body {
+  width: 10rem;
+  margin: 0;
+  color: #9da1a7;
+  font-size: 0.16rem;
+  font-family: "Helvetica Neue", Helvetica,STHeiTi ,sans-serif; }
+
+ul, p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal; }
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+a, a:hover {
+  text-decoration: none; }
+
+a, input, button {
+  -webkit-tap-highlight-color: transparent; }
+
+input, button {
+  -webkit-apprence: none;
+  border-redius: 0;
+  border: 0;
+  padding: 0; }
+
+input {
+  outline: none;
+  resize: none;
+  border: none;
+  background: transparent; }
+
+a, a:hover {
+  text-decoration: none; }
+
+em {
+  font-style: normal; }
+
+strong {
+  font-weight: normal; }
+
+img {
+  vertical-align: top;
+  border: none; }
+
+.top {
+  height: 1.173333rem;
+  width: 10rem;
+  background: #2b3139; }
+
+.top-label {
+  margin: 0 0.133333rem;
+  position: relative; }
+  .top-label h2 {
+    height: 1.173333rem;
+    line-height: 1.173333rem;
+    color: #fff;
+    font-weight: normal;
+    text-align: center; }
+    [data-dpr="1"] .top-label h2 {
+      font-size: 16px; }
+    [data-dpr="2"] .top-label h2 {
+      font-size: 32px; }
+    [data-dpr="3"] .top-label h2 {
+      font-size: 48px; }
+  .top-label a {
+    position: absolute;
+    display: block;
+    color: #b3bdc2; }
+
+.prev {
+  display: block;
+  width: 0.24rem;
+  height: 0.413333rem;
+  left: 0.133333rem;
+  bottom: 0.4rem; }
+  .prev img {
+    width: 0.3rem; }
+
+.comment {
+  width: 9.2rem;
+  margin: 0 0.4rem;
+  padding-top: 0.8rem; }
+  .comment li {
+    border-bottom: 1px solid #dedede;
+    padding-bottom: 0.666667rem; }
+
+.head span {
+  color: #3c4350;
+  font-size: 16px; }
+
+.head em {
+  color: #b7ce63;
+  font-size: 18px; }
+
+.write-time {
+  font-size: 14px;
+  color: #9da1a7;
+  margin: 0.32rem 0 0.6rem; }
+
+.comment .comtext {
+  color: #696d6f;
+  font-size: 14px;
+  line-height: 1.6em;
+  margin-bottom: 0.533333rem; }
+
+.wrap {
+  width: 10rem;
+  height: 17.786667rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5; }
+
+.signin {
+  width: 1.733333rem;
+  height: 1.733333rem;
+  margin: 1.466667rem auto 0; }
+
+.wrap h3 {
+  color: #040a0e;
+  margin: 0.8rem 0 0.4rem; }
+  [data-dpr="1"] .wrap h3 {
+    font-size: 18px; }
+  [data-dpr="2"] .wrap h3 {
+    font-size: 36px; }
+  [data-dpr="3"] .wrap h3 {
+    font-size: 54px; }
+
+.note {
+  color: #06090e; }
+  [data-dpr="1"] .note {
+    font-size: 12px; }
+  [data-dpr="2"] .note {
+    font-size: 24px; }
+  [data-dpr="3"] .note {
+    font-size: 36px; }
+
+form {
+  margin: 0.53333rem 0;
+  height: 6.4rem;
+  color: #06090e; }
+
+[data-dpr="1"] table tr:nth-of-type(even) td {
+  font-size: 14px; }
+
+[data-dpr="2"] table tr:nth-of-type(even) td {
+  font-size: 28px; }
+
+[data-dpr="3"] table tr:nth-of-type(even) td {
+  font-size: 42px; }
+
+td {
+  padding: 0.13333rem; }
+
+.remind {
+  width: 5rem;
+  color: #666; }
+  [data-dpr="1"] .remind {
+    font-size: 14px; }
+  [data-dpr="2"] .remind {
+    font-size: 28px; }
+  [data-dpr="3"] .remind {
+    font-size: 42px; }
+
+input {
+  display: block;
+  color: #3c4350;
+  width: 5rem;
+  height: 1.33rem;
+  line-height: 1.33rem;
+  background: #dadada;
+  border-radius: 0.21333rem;
+  border: 1px solid #eee;
+  outline: none;
+  text-indent: 10px; }
+  [data-dpr="1"] input {
+    font-size: 14px; }
+  [data-dpr="2"] input {
+    font-size: 28px; }
+  [data-dpr="3"] input {
+    font-size: 42px; }
+
+.create-account {
+  margin-top: 0.6rem;
+  width: 6.666667rem;
+  height: 1.733333rem;
+  line-height: 1.733333rem;
+  color: #fff;
+  background-color: #06bebd;
+  text-align: center;
+  border-radius: 1.33333rem; }
+  [data-dpr="1"] .create-account {
+    font-size: 18px; }
+  [data-dpr="2"] .create-account {
+    font-size: 36px; }
+  [data-dpr="3"] .create-account {
+    font-size: 54px; }
+
+.note-more {
+  text-align: center;
+  color: #919499;
+  margin-top: 0.5rem; }
+  [data-dpr="1"] .note-more {
+    font-size: 14px; }
+  [data-dpr="2"] .note-more {
+    font-size: 28px; }
+  [data-dpr="3"] .note-more {
+    font-size: 42px; }
+
+.note-more a {
+  color: #06bebd; }
+
+.finalMessage {
+  margin: .6rem  auto 0;
+  color: #333; }
+  [data-dpr="1"] .finalMessage {
+    font-size: 14px; }
+  [data-dpr="2"] .finalMessage {
+    font-size: 28px; }
+  [data-dpr="3"] .finalMessage {
+    font-size: 42px; }

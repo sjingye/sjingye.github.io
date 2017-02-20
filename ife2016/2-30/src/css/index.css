@@ -1,0 +1,57 @@
+input{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+button{
+    border: none;
+}
+form{
+    min-width: 500px;
+    height: 300px;
+    font-size: 14px;
+    color: #0d0d0d;
+}
+input[type="text"]{
+    border: 1px solid #999;
+    border-radius: 6px;
+    outline: none;
+    min-width: 300px;
+    height: 36px;
+    text-indent: 6px;
+}
+input[type="text"].wrong{
+    border: 1px solid #ff5638;
+}
+input[type="text"].right{
+    border: 1px solid #459d46;
+}
+label{
+    text-align: right;
+    display: block;
+    width: 100%;
+    font-weight: bold;
+}
+table td{
+    padding: 10px;
+}
+button{
+    width: 80px;
+    height: 36px;
+    color: #fff;
+    background-color: #00b3ee;
+    border-radius: 6px;
+    margin-left: 40px;
+}
+.remind td:nth-of-type(2){
+    color: #555;
+    display: none;
+}
+.remind td:nth-of-type(2).wrong{
+    color: #ff5638;
+    display: table-cell;
+}
+.remind td:nth-of-type(2).right{
+    color: #459d46;
+    display: table-cell;
+}
