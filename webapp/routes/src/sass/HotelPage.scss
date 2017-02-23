@@ -4,6 +4,8 @@
 @import "globle";
 body{
 	background-color: #fff;
+	position: relative;
+	padding-bottom: 2rem;
 }
 .top{
 	height:9.733333rem;
@@ -96,6 +98,9 @@ body{
 .reviews .reviews-score{
 	width:1.066667rem;
 }
+.about-hotel{
+	margin-bottom: 0.3rem;
+}
 .about-hotel h2,.reviews h2,.rooms h2{
 	color:#3c4350;
 	margin:0.666667rem auto 0.48rem;
@@ -110,7 +115,6 @@ body{
 .dif-items{
 	width:10rem;
 	padding-bottom: 0.666667rem;
-	border-bottom:1px solid #dedede;
 }
 .dif-items li{
 	margin:0 0.4rem;
@@ -193,7 +197,6 @@ body{
 .service-info{
 	width:10rem;
 	box-sizing: border-box;
-	background-color: #f7f7f8;
 	padding: 0.4rem 0 0.4rem;
 }
 .info{
@@ -203,7 +206,7 @@ body{
 	color: #3c4350;
 }
 .price{
-	margin:0rem 0.586667rem 0;
+	margin:0rem 0.586667rem .2rem;
 	@include data-dpr("font-size",21);
 	color:#06bebd;
 	em{
@@ -293,6 +296,9 @@ body{
 	height: 1.6rem;
 	line-height: 1.6rem;
 	margin-top: 0.64rem;
+	position: absolute;
+	bottom:0;
+	left:0;
 	background-color: #06bebd;
 	color:#fff;
 	@include data-dpr("font-size",18);

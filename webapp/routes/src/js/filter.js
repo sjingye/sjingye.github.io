@@ -54,8 +54,10 @@ class timePicker{
                 let prevDate = self.choosedDate.start.getDate();
                 let nextMonth = self.choosedDate.end.getMonth()+1;
                 let nextDate = self.choosedDate.end.getDate();
+                let d = (self.choosedDate.end.getTime() - self.choosedDate.start.getTime())/(24*60*60*1000);
+                d = parseInt(d);
                 chooseDate.html(prevMonth+"."+prevDate+"——"+nextMonth+"."+nextDate);
-                totalDays.html(nextDate-prevDate+"夜");
+                totalDays.html(d+"夜");
             }
             event.preventDefault();
         });

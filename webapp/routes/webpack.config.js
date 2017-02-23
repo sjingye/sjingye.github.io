@@ -1,7 +1,8 @@
 module.exports = {
     entry: {
         index: './src/js/index.js',
-        signin: './src/js/signin.js'    
+        signin: './src/js/signin.js',
+        hotelPage:'./src/js/hotelPage.js'    
     },
     output: {
         filename:'[name].js',
@@ -14,5 +15,5 @@ module.exports = {
             loader: "babel-loader"
         }]
     },
-    // watch: true
+    watch: true
 };

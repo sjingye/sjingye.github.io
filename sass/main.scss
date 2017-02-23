@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import "mixin";
+@import "extend";
 
 /* reset begin */
 body, p, ul, li, h1, h3, h4,div {
@@ -61,7 +62,6 @@ span{
 .overflow-hidden{
     overflow: hidden;
 }
-/* reset end */
 
 /*structure begin*/
 /*header begin*/
@@ -112,13 +112,12 @@ button.navbar-toggle {
 }
 .SecTitle{
     h2{
-        color: #fafafa;
+        color: $main-color-font-h;
         font-weight: 700;
-        font-size: 26px;
         margin: 0 0 15px 0 !important;
     }
     hr{
-        width: 120px;
+        
         height: 2px;
         background-color: $main-color;
         border: none !important;
@@ -149,22 +148,26 @@ button.navbar-toggle {
     background-color: transparent;
     border: 1px solid #999;
     h4{
+        font-weight: normal;
         margin-bottom: 10px;
     }
     .college{
         margin: 0 10px;
     }
 }
+.self-introduction{
+    margin: 20px;
+    color: #eee;
+}
 /*section-0 end*/
 /*section-1 begin*/
 .section1{
     .secContent{
-        // padding-top: 0px;
         margin-top: 0 !important;
         article{
             color:#000;
             perspective:1000;
-            transform-style:preserve-3d;
+            transform-style: preserve-3d;
             &:hover .flip{
                 transform:rotateY(180deg);
             }
@@ -174,7 +177,7 @@ button.navbar-toggle {
                 transform-style:preserve-3d;
                 margin:8px 0px;
                 border-radius:6px;
-                background: rgba(255,255,255,0.3);
+                background: rgba(255,255,255,0.2);
                 >div{
                     position:absolute;
                     top: 0px;
@@ -182,40 +185,37 @@ button.navbar-toggle {
                     backface-visibility:hidden;
                     width:100%;
                     height:100%;
+                    padding: 10px 0;
                 }
                 .front{
                     z-index:2;
                 }
                 .back{
                     transform:rotateY(-180deg);
-                    color: #fafafa;
-                    font-size: 14px;
-                    line-height: 1.4em;
+                    color: #fff;
+                    font-weight: 200;
                     p{
-                        margin: 4px;
+                        margin: 8px;
+                        text-align: center;
                     }
                 }
                 h4{
                     color: #fff;
                     font-size: 16px;
                     margin: 6px;
+                    text-align: center;
                 }
                 ul{
-                    @include data-dpr("font-size",12)
                     li{
                         background-color: rgba(255,255,255,0.6);
                         width: 80%;
                         margin: 10% auto;
-                        padding:0 2px;
                         border-radius: 6px;
+                        color:#000;
+                        font-weight: bold;
+                        text-align: center;
                     }
                 }
-            }
-            &.col-sm-3  .flip{
-                min-height: 220px;
-            }
-            &.col-xs-6  .flip{
-                min-height: 190px;
             }
         }
     }
@@ -223,51 +223,52 @@ button.navbar-toggle {
 /*section-1 end*/
 /*section-2 begin*/
 .section2{
-    .slide-content{
-        margin: 30px 60px 0;
-        >div:nth-of-type(1){
-            margin-bottom: 20px;
+    .work-unit{
+        border: 1px solid #999;
+        border-radius: 8px;
+        margin-top: 20px;
+        width: 100%;
+        height: 100%;
+        i{
+            display: block;
+            position: absolute;
+            left:24px;
+            top:50%;
+            margin-top:-16px;
         }
-        >div:nth-of-type(2){
-            padding-left: 40px;
-            h3{
-                font-size: 20px;
-                color: $main-color-font-h;
-                margin-bottom: 25px;
+        >div:nth-of-type(1){
+            float: left;
+            margin-left:10px;
+            max-width: 70%;
+            text-align:left;
+            color: $main-color-font-h;
+            h5{
+                color: #fff;
             }
             p{
-                font-size: 16px;
-                color: $main-color-font-p;
-            }
-            ul{
-                li{
-                    float: left;
-                    margin:25px 20px 0 0 ;
-                    padding: 4px 8px;
-                    background-color: $main-color-font-h;
-                    color: $main-color;
-                }
+                color: #f5f5f5;
             }
         }
-
+        >div:nth-of-type(2){
+            position: absolute;
+            right:20px;
+            top:50%;
+            margin-top: -28px;
+            a{
+                text-align:center;
+                color: $main-color-font-h;
+                background-color: $main-color;
+                border-radius: 4px;
+                padding: 6px;
+                margin: 4px;
+                display: block;
+                font-size: 12px;
+            }
+        }
     }
 }
 /*section-2 end*/
 /*fullpage end*/
-@media (max-width: 992px){
-  .navbar-brand {
-      margin-top: 0 !important;
-      margin-right: 5px;
-      max-width: 80%;
-      height: auto !important;
-      padding-left: 15px;
-  }
-  .navbar-toggle {
-      max-width: 20%;
-  }
-}
-
-
 #menu{
   width: 90px;
   height: 220px;
@@ -295,23 +296,4 @@ button.navbar-toggle {
     }
   }
 }
- /*Large desktop*/
-/*@media (min-width: 1200px) { ... }
 
-!* Portrait tablet to landscape and desktop *!
-@media (min-width: 768px) and (max-width: 979px) { ... }
-
-!* Landscape phone to portrait tablet *!
-@media (max-width: 767px) { ... }
-
-!* Landscape phones and down *!
-@media (max-width: 480px) {
-    ...
-}*/
-
-/*structure end*/
-
-.self-introduction{
-    margin: 20px;
-    color: #eee;
-}

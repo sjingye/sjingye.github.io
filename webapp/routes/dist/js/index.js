@@ -63,20 +63,32 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 2:
+/***/ 3:
 /***/ (function(module, exports) {
 
-// 1.入口动画效果
-/*$enter = $(".enter >ul");
-$enterLis = $(".enter >ul >li");
-$enter.animate({transform:'translateX(-3000px)'},12000,function () {
-    $(this).css('transform','translateX(0px)');
-});*/
+//1.入口动画效果
+let $enter = $(".enter");
+let $enterLis = $(".enter >ul >li");
+window.onload = function () {
+    play();
+};
+function play() {
+    var index = 0;
+    var timer = setInterval(function () {
+        index++;
+        $enterLis.eq(index).addClass("active").siblings().removeClass("active");
+        if (index === 4) {
+            clearInterval(timer);
+            $enter.hide();
+            return false;
+        }
+    }, 3000);
+}
 // 2.点击nav切换显示，左右滑动屏幕时切换显示
 let $navAs = $(".top nav a");
 let $cSecs = $(".wrap>div");

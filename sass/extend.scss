@@ -1,0 +1,111 @@
+@import "mixin";
+
+/*响应式*/
+/*平板或者pc*/
+@media (min-width: 768px){
+    .SecTitle{
+        h2{
+            font-size: 26px;
+         }
+         hr{
+             width: 180px;
+         }
+         p{
+             font-size: 20px;
+         }   
+    }
+    // section0
+    .self-introduction{
+        font-size: 16px;
+    }
+    .well{
+        h4{
+            
+            span{
+                font-size: 18px;
+            }
+        }
+    }
+    // section1
+    .flip{
+        min-height: 270px;
+        ul{
+            li{
+                font-size: 14px;
+                padding: 4px 0;
+            }
+        }
+    }
+    .back{
+        font-size: 16px;
+        line-height: 1.4em;
+    }
+    //section2
+    .section2{
+        .work-unit{
+            >div:nth-of-type(1){
+                h5{
+                    font-size: 15px;
+                }
+                p{
+                    font-size: 13px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+/*手机*/
+@media (max-width: 768px){
+    .SecTitle{
+        h2{
+            @include data-dpr("font-size",18);
+        }
+        hr{
+             width: 120px;
+         }
+        p{
+            @include data-dpr("font-size",15);
+         } 
+    }
+    // section0
+    .self-introduction{
+        @include data-dpr("font-size",13);
+    }
+    .well{
+        h4{
+            span{
+                @include data-dpr("font-size",14);
+            }
+        }
+    }
+    // section1
+    .flip{
+        min-height: 220px;
+        ul{
+            li{
+                @include data-dpr("font-size",13);
+                padding: 4px 0 ;
+            }
+        }
+    }
+    .back{
+        @include data-dpr("font-size",13);
+        line-height: 1.4em;
+    }
+    //section2
+    .section2{
+        .work-unit{
+            >div:nth-of-type(1){
+                h5{
+                    @include data-dpr("font-size",14);
+                }
+                p{
+                    @include data-dpr("font-size",12);
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+

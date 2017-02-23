@@ -70,6 +70,7 @@ const data = {
             wrong:"密码不可用",
             isRight: "false"
         }
-    ]
+    ],
+    commentScore: [9.0,8.4,8.8,9.4]
 };
 export default data;

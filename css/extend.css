@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/*响应式*/
+/*平板或者pc*/
+@media (min-width: 768px) {
+  .SecTitle h2 {
+    font-size: 26px; }
+  .SecTitle hr {
+    width: 180px; }
+  .SecTitle p {
+    font-size: 20px; }
+  .self-introduction {
+    font-size: 16px; }
+  .well h4 span {
+    font-size: 18px; }
+  .flip {
+    min-height: 270px; }
+    .flip ul li {
+      font-size: 14px;
+      padding: 4px 0; }
+  .back {
+    font-size: 16px;
+    line-height: 1.4em; }
+  .section2 .work-unit > div:nth-of-type(1) h5 {
+    font-size: 15px; }
+  .section2 .work-unit > div:nth-of-type(1) p {
+    font-size: 13px;
+    margin-bottom: 10px; } }
+
+/*手机*/
+@media (max-width: 768px) {
+  [data-dpr="1"] .SecTitle h2 {
+    font-size: 18px; }
+  [data-dpr="2"] .SecTitle h2 {
+    font-size: 36px; }
+  [data-dpr="3"] .SecTitle h2 {
+    font-size: 54px; }
+  .SecTitle hr {
+    width: 120px; }
+  [data-dpr="1"] .SecTitle p {
+    font-size: 15px; }
+  [data-dpr="2"] .SecTitle p {
+    font-size: 30px; }
+  [data-dpr="3"] .SecTitle p {
+    font-size: 45px; }
+  [data-dpr="1"] .self-introduction {
+    font-size: 13px; }
+  [data-dpr="2"] .self-introduction {
+    font-size: 26px; }
+  [data-dpr="3"] .self-introduction {
+    font-size: 39px; }
+  [data-dpr="1"] .well h4 span {
+    font-size: 14px; }
+  [data-dpr="2"] .well h4 span {
+    font-size: 28px; }
+  [data-dpr="3"] .well h4 span {
+    font-size: 42px; }
+  .flip {
+    min-height: 220px; }
+    .flip ul li {
+      padding: 4px 0; }
+      [data-dpr="1"] .flip ul li {
+        font-size: 13px; }
+      [data-dpr="2"] .flip ul li {
+        font-size: 26px; }
+      [data-dpr="3"] .flip ul li {
+        font-size: 39px; }
+  .back {
+    line-height: 1.4em; }
+    [data-dpr="1"] .back {
+      font-size: 13px; }
+    [data-dpr="2"] .back {
+      font-size: 26px; }
+    [data-dpr="3"] .back {
+      font-size: 39px; }
+  [data-dpr="1"] .section2 .work-unit > div:nth-of-type(1) h5 {
+    font-size: 14px; }
+  [data-dpr="2"] .section2 .work-unit > div:nth-of-type(1) h5 {
+    font-size: 28px; }
+  [data-dpr="3"] .section2 .work-unit > div:nth-of-type(1) h5 {
+    font-size: 42px; }
+  .section2 .work-unit > div:nth-of-type(1) p {
+    margin-bottom: 10px; }
+    [data-dpr="1"] .section2 .work-unit > div:nth-of-type(1) p {
+      font-size: 12px; }
+    [data-dpr="2"] .section2 .work-unit > div:nth-of-type(1) p {
+      font-size: 24px; }
+    [data-dpr="3"] .section2 .work-unit > div:nth-of-type(1) p {
+      font-size: 36px; } }

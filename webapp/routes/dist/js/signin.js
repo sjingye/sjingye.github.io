@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -126,7 +126,8 @@ const data = {
         right: "密码可用",
         wrong: "密码不可用",
         isRight: "false"
-    }]
+    }],
+    commentScore: [9.0, 8.4, 8.8, 9.4]
 };
 /* harmony default export */ __webpack_exports__["a"] = data;
 
@@ -153,7 +154,8 @@ const EventUtil = {
 
 /***/ }),
 /* 2 */,
-/* 3 */
+/* 3 */,
+/* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

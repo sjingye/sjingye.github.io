@@ -4,6 +4,7 @@
 let contains = $(".calendar ul");
 let chooseDate = $(".choose-date");
 let totalDays = $(".total-days");
+let apply = $(".apply");
 //日期类
 class timePicker{
     constructor(container,date,choosedEle,ul){
@@ -25,8 +26,8 @@ class timePicker{
         //触摸选择日期事件
         this.container.on("touchend",function (event) {
             let $target = $(event.target);
-            if($target.hasClass("past")){
-                return;
+            if($target.hasClass("past") || !!!$target.attr("data-date")){
+                return false;
             }
             if($target.is("li")){
                 if(!onoff){
@@ -54,8 +55,14 @@ class timePicker{
                 let prevDate = self.choosedDate.start.getDate();
                 let nextMonth = self.choosedDate.end.getMonth()+1;
                 let nextDate = self.choosedDate.end.getDate();
+                let d = (self.choosedDate.end.getTime() - self.choosedDate.start.getTime())/(24*60*60*1000);
+                d = parseInt(d+1);
                 chooseDate.html(prevMonth+"."+prevDate+"——"+nextMonth+"."+nextDate);
-                totalDays.html(nextDate-prevDate+"夜");
+                totalDays.html(d+"夜");
+                apply.on("touchend",function(e){
+                    e.preventDefault();
+                    alert("时间提交成功");
+                })
             }
             event.preventDefault();
         });
