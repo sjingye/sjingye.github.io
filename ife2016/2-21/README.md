@@ -1,4 +1,4 @@
-[**task2-9 Demo**](http://yenshih.com/ife/2016_spring/task2-9/dist/index.html)
+[**task2-21 Demo**](sjingye.github.io/ife2016/2-21/)
 
 # 任务二十一：基础JavaScript练习（四）
 

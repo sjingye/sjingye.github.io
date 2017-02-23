@@ -1,3 +1,5 @@
+[**task3-43 Demo**](sjingye.github.io/ife2016/3-43/)
+
 任务四十三：多功能相册之拼图布局
 ===
 **面向人群：** 有一定HTML、CSS、JavaScript基础

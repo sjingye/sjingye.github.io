@@ -127,7 +127,8 @@ img {
   top: 0;
   left: 0px;
   z-index: 3;
-  overflow: hidden; }
+  overflow: hidden;
+  display: none; }
   .enter ul {
     width: 10rem;
     height: 100%; }

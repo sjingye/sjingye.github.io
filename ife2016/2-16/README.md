@@ -1,4 +1,4 @@
-[**task2-4 Demo**](http://yenshih.com/ife/2016_spring/task2-4/dist/index.html)
+[**task2-16 Demo**](sjingye.github.io/ife2016/2-16/)
 
 # 任务十六：零基础JavaScript编码（四）
 

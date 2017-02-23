@@ -1,5 +1,5 @@
 //1.入口动画效果
-let $enter = $(".enter");
+/*let $enter = $(".enter");
 let $enterLis = $(".enter >ul >li");
 window.onload =  function(){
     play();
@@ -15,7 +15,7 @@ function play(){
             return false;
         }
     },3000);
-}
+} */
 // 2.点击nav切换显示，左右滑动屏幕时切换显示
 let $navAs = $(".top nav a");
 let $cSecs = $(".wrap>div");

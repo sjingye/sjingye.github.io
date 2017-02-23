@@ -1,3 +1,5 @@
+[**task3-39 Demo**](sjingye.github.io/ife2016/3-39/)
+
 任务三十九：UI组件之冻结行列表格
 ===
 **面向人群：** 有一定JavaScript基础

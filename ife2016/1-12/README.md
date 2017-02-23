@@ -1,4 +1,4 @@
-[**task1-12 Demo**](http://yenshih.com/ife/2016_spring/task2-4/dist/index.html)
+[**task1-12 Demo**](sjingye.github.io/ife2016/1-12/)
 
 # 任务十二：学习CSS 3的新特性
 
