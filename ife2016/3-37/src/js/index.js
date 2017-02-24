@@ -5,7 +5,7 @@ let mask = document.querySelector(".mask");
 let login = document.querySelector("header li");
 let closeBtn = document.querySelector(".close-btn");
 let loginBox = document.querySelector(".login-box");
-let loginBoxHeader = document.querySelector(".login-box-header");
+let loginBoxHeader = document.querySelector(".login-box-header>p");
 class Emersion {
     constructor(container){
         this.container = container;
@@ -20,17 +20,17 @@ class Emersion {
     }
     drag(event){
         let e = EventUtil.getEvent(event);
-        let disX = e.clientX - loginBox.offsetLeft;
-        let disY = e.clientY- loginBox.offsetTop;
-        EventUtil.addEvent(loginBoxHeader,"mousemove", function (event) {
+        var disX = e.clientX - loginBox.offsetLeft;
+        var disY = e.clientY- loginBox.offsetTop;
+        document.onmousemove = function (event) {
             let e = EventUtil.getEvent(event);
             loginBox.style.left = e.clientX - disX + "px";
             loginBox.style.top = e.clientY - disY + "px";
-        });
-        EventUtil.addEvent(loginBoxHeader,"mouseup", function () {
+        };
+        document.onmouseup = function () {
             loginBoxHeader.onmousedown = null;
             loginBoxHeader.onmousemove = null;
-        });
+        };
     }
     init(){
         let self = this;
@@ -43,7 +43,10 @@ class Emersion {
         EventUtil.addEvent(login,"click",function () {
             self.show();
         });
-        this.drag(event);
+        loginBoxHeader.onmousedown = function(event){
+            self.drag(event);
+        }
+        
     }
 };
 let a = new Emersion(loginBox);

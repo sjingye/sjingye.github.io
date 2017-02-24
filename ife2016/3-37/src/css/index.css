@@ -102,3 +102,11 @@ header ul a{
     height: 40px;
     float: right;
 }
+.login-box-header p{
+    width: 210px;
+    height: 40px;
+}
+.login-box-header p:hover{
+    cursor: move;
+}
+

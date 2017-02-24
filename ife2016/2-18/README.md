@@ -1,4 +1,4 @@
-[**task2-18 Demo**](sjingye.github.io/ife2016/2-18/)
+[**task2-18 Demo**](https://sjingye.github.io/ife2016/2-18/)
 
 # 任务十八：基础JavaScript练习（一）
 

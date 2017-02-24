@@ -1,4 +1,4 @@
-[**task2-17 Demo**](sjingye.github.io/ife2016/2-17/)
+[**task2-17 Demo**](https://sjingye.github.io/ife2016/2-17/)
 
 # 任务十七：零基础JavaScript编码（五）
 

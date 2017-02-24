@@ -1,4 +1,4 @@
-[**task3-39 Demo**](sjingye.github.io/ife2016/3-39/)
+[**task3-39 Demo**](https://sjingye.github.io/ife2016/3-39/)
 
 任务三十九：UI组件之冻结行列表格
 ===

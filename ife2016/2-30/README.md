@@ -1,4 +1,4 @@
-[**task2-30 Demo**](sjingye.github.io/ife2016/2-30/)
+[**task2-30 Demo**](https://sjingye.github.io/ife2016/2-30/)
 
 任务三十：表单（二）多个表单项的动态校验
 ===
