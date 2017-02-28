@@ -672,7 +672,7 @@
 	-moz-animation: flipover-top .15s linear 1.2s 1 normal forwards;
 	-ms-animation: flipover-top .15s linear 1.2s 1 normal forwards;
 	-o-animation: flipover-top .15s linear 1.2s 1 normal forwards;
-	animation: flipover-top .15s linear 1.2s 1 normal forwards
+	animation: flipover-top .15s linear 1.2s 1 normal forwards;
 }
 
 #stage-1.stage-state-default .stage-1-icon-2 .stage-1-icon-bottom {
@@ -793,7 +793,7 @@
 	-moz-animation: title-chars-1 .8s ease-out 2.7s 1 normal forwards;
 	-ms-animation: title-chars-1 .8s ease-out 2.7s 1 normal forwards;
 	-o-animation: title-chars-1 .8s ease-out 2.7s 1 normal forwards;
-	animation: title-chars-1 .8s ease-out 2.7s 1 normal forwards
+	animation: title-chars-1 .8s ease-out 2.7s 1 normal forwards;
 }
 
 #stage-1.stage-state-default .stage-1-title li span:nth-child(2) {
@@ -861,7 +861,7 @@
 	-moz-animation: fadein-from-bottom .8s ease-out 2.9s 1 normal forwards;
 	-ms-animation: fadein-from-bottom .8s ease-out 2.9s 1 normal forwards;
 	-o-animation: fadein-from-bottom .8s ease-out 2.9s 1 normal forwards;
-	animation: fadein-from-bottom .8s ease-out 2.9s 1 normal forwards
+	animation: fadein-from-bottom .8s ease-out 2.9s 1 normal forwards;
 }
 
 #stage-1.stage-state-default .package-info {
@@ -882,7 +882,7 @@
 	-moz-animation: header .8s ease-out 2.9s 1 normal forwards;
 	-ms-animation: header .8s ease-out 2.9s 1 normal forwards;
 	-o-animation: header .8s ease-out 2.9s 1 normal forwards;
-	animation: header .8s ease-out 2.9s 1 normal forwards
+	animation: header .8s ease-out 2.9s 1 normal forwards;
 }
 
 #footer {
@@ -1398,7 +1398,7 @@
 	-moz-animation: popup-br 6s linear 3.1s infinite alternate none;
 	-ms-animation: popup-br 6s linear 3.1s infinite alternate none;
 	-o-animation: popup-br 6s linear 3.1s infinite alternate none;
-	animation: popup-br 6s linear 3.1s infinite alternate none
+	animation: popup-br 6s linear 3.1s infinite alternate none;
 }
 
 #stage-2.stage-state-out .stage-2-icon li {

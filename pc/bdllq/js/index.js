@@ -67,9 +67,7 @@
 			if( n === 0 ){
 				// 让向下箭头上面的文字一秒钟内淡入
 				btnNextText.animate({opacity:1},2000);
-				console.log(1);
 			}
-
 			allStages.eq(n).removeClass("stage-state-out");
 			allStages.eq(n).addClass("stage-state-in stage-state-out-in");
 			allStages.eq(lastNum).removeClass("stage-state-in stage-state-out-in");
@@ -80,10 +78,8 @@
 				n = len - 1;
 				return;
 			}
-			console.log(n);
 			// 让向下箭头上面的文字一秒钟内淡出
 			btnNextText.animate({opacity:0},1000);
-
 			allStages.eq(lastNum).addClass("stage-state-in stage-state-out");
 			allStages.eq(n).addClass("stage-state-in");
 		}
@@ -93,7 +89,6 @@
 
 	// 点击导航的时候，要切换状态，并且同步修改n值
 	navDot.click(function (){
-
 		allStages.eq(0).addClass("stage-state-in"); 
 		n = $(this).index();
 		// 当点击的索引大于上一次点击的索引时
@@ -209,7 +204,7 @@
 	var lens = 8;
 	 
 	$(".stage-4-icon").on("webkitAnimationEnd",function (){
-		animateNum++;       // 没触发一次webkitAnimationEnd，animateNum++
+		animateNum++;       // 每触发一次webkitAnimationEnd，animateNum++
 		if( animateNum == 5 ){    // 因为有五个动画，每一个动画执行完都会触发这个事件
 			// 从下边下落的动画完成后，要将每一个图标以动画的形式平铺开
 			animateNum = 0;        // 清零，以便下次使用
@@ -232,7 +227,7 @@
 							"margin":0,
 							"top":0,
 						});
-						console.log( st4Items.css("float") == "left" );
+						// console.log( st4Items.css("float") == "left" );
 						if( st4Items.css("float") == "left" ){
 							// 移入stage4图标的父级的时候，动态修改每一个图标的宽高
 							stage4Par.on("mousemove",st4ParOnFn);
@@ -305,13 +300,13 @@
 				stage4Des.each(function (){
 					$(this).removeClass("jqDockItem");
 				})
-				stage4Des.eq(st4Items.index($(this))).css("display","block");
-				stage4Des.eq(st4Items.index($(this))).addClass("jqDockMouse7");
+				stage4Des.eq(st4Items.index($(this)))
+				.css("display","block")
+				.addClass("jqDockMouse7");
 			}
 
 			// 当stage-4的transition结束的时候，恢复所有图标items的绝对定位
 			$("#stage-4  .stage-description").on("webkitTransitionEnd",function (){
-
 				if( !$("#stage-4").hasClass("stage-state-in") ){
 					st4Items.css({
 						"position":"absolute",
